@@ -1,91 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=PT+Mono&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Gaegu:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Sue+Ellen+Francisco&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
-@import "animations.css";
-@import "paw.css";
-@import "burger.css";
-@import "nav.css";
-@import "polygons.css";
 @import "home.css";
 @import "story.css";
-@import "stats.css";
-@import "timeline.css";
-@import "about.css";
-@import "line.css";
 
 :root {
   --primary: #f1f3f6;
-}
-
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
 }
 
 body {
   background-color: var(--primary);
 }
 
-header {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 999;
-  width: 1200px;
-  margin: auto;
-  /* border: 1px solid rgb(33, 54, 8); */
-  display: flex;
-  justify-content: space-between;
-}
-
-.logo {
-  margin-top: 50px;
-  text-align: center;
-  cursor: pointer;
-  width: 60px;
-}
-
-.container {
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 1200px;
-  height: 100vh;
-  margin: auto;
-  border: 3px solid coral;
-}
-
 h1 {
-  font-family: "Major Mono Display";
   letter-spacing: 20px;
   text-indent: 20px;
   font-size: 5rem;
   font-weight: 100;
   color: #575757;
-}
-
-/* Mobile devices */
-@media screen and (max-width: 480px) {
-}
-
-/* Tablets */
-@media screen and (max-width: 768px) {
-}
-
-/* Small screens (Laptops) */
-@media screen and (max-width: 1024px) {
-}
-
-/* Large screens (Desktop and up) */
-@media screen and (max-width: 1200px) {
 }
