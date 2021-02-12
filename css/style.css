@@ -1,12 +1,52 @@
-@import "home.css";
 @import "story.css";
+@import "home.css";
 
-:root {
-  --primary: #f1f3f6;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; /*unngaar padding og margin dytter element og endrer storrelse*/
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  border: 3px orange solid;
+  width: 1330px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+button:focus {
+  outline: none;
+}
+
+.burger {
+  /* background: url("../assets/svg/burger.svg");
+  background-repeat: no-repeat;
+  background-size: auto; */
+  width: 100px;
+  height: 100px;
+  border-radius: 106px;
+  background: #f1f3f6;
+  box-shadow: 10px 10px 27px #d4d6d8, -10px -10px 27px #ffffff;
+  border: none;
+  cursor: pointer;
 }
 
 body {
-  background-color: var(--primary);
+  background-color: #f1f3f6;
+}
+
+.container {
+  display: flex;
+  justify-content: center; /*fra venstre til hoyre*/
+  align-items: center; /*fra top til bottom*/
+  width: 1330px;
+  height: 100vh;
+  margin: auto;
+  border: blue 2px solid;
 }
 
 h1 {
@@ -15,4 +55,26 @@ h1 {
   font-size: 5rem;
   font-weight: 100;
   color: #575757;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  border: 3px orange solid;
+  width: 1330px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  bottom: 0;
+}
+
+.paw {
+  width: 100px;
+  height: 100px;
+  border-radius: 106px;
+  background: #f1f3f6;
+  box-shadow: 10px 10px 27px #d4d6d8, -10px -10px 27px #ffffff;
+  border: none;
+  cursor: pointer;
 }

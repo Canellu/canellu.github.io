@@ -1,24 +1,25 @@
-#story .grid-container {
+#story {
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 450px 450px;
+  grid-template-columns: repeat(3, 1fr); /*3格4线*/
+  grid-template-rows: 1fr 1fr;
   border: 2px solid black;
+  width: 100%;
 }
 
-#story .LunadoCover {
+.LunadoCover {
   width: 850px;
 }
 
 .item1 {
-  grid-column: 1 / span 2;
+  grid-column: 1 / span 2; /*从第一格开始过去占两格*/
   grid-row: 1 / span 2;
   border: 2px solid red;
 }
 
 .item2 {
   grid-column: 2 / span 2;
-  grid-row: 1 / 2;
+  grid-row: 1 / 2; /*从第一条线到第二条线*/
   z-index: 1;
   border: 2px solid greenyellow;
 }
