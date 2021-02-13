@@ -4644,7 +4644,8 @@ const fp = new fullpage("#fullpage", {
   anchors: [
     "Homepage",
     "Storytell",
-    "Statistics",
+    "StatisticsLuna",
+    "StatisticsLudo",
     "TimelineGallery",
     "AboutUs",
   ],

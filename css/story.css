@@ -7,14 +7,15 @@
   width: 100%;
 }
 
-.LunadoCover {
-  width: 850px;
+.lunadoCover {
+  width: 800px;
 }
 
 .item1 {
   grid-column: 1 / span 2; /*从第一格开始过去占两格*/
   grid-row: 1 / span 2;
   border: 2px solid red;
+  margin-left: 100px;
 }
 
 .item2 {
@@ -28,4 +29,13 @@
   grid-column: 3 / span 1;
   grid-row: 2 / 3;
   border: 2px solid blueviolet;
+}
+
+.picBg {
+  margin-top: 100px;
+  width: 850px;
+  grid-column: 1 / span 2; /*从第一格开始过去占两格*/
+  grid-row: 1 / span 2;
+  border: 2px solid rgb(12, 150, 241);
+  z-index: -1;
 }

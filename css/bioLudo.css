@@ -1,0 +1,58 @@
+#bioLudo {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 25% 25% auto;
+  grid-template-rows: 40% auto;
+  border: 2px solid black;
+  width: 100%;
+  height: 80vh;
+}
+
+.nightShadow {
+  grid-column: 1 / span 3;
+  grid-row: 1;
+  border: 2px solid rgb(93, 0, 0);
+  height: 60px;
+}
+
+.ludoPic {
+  grid-column: 3;
+  grid-row: 2;
+  border: 2px solid red;
+  width: 200px;
+  height: 300px;
+}
+
+#bioLudo .bgVector {
+  grid-column: 3;
+  grid-row: 2;
+  border: 2px solid rgb(0, 110, 255);
+  width: 300px;
+  height: 200px;
+  z-index: -1;
+}
+
+#bioLudo .info {
+  grid-column: 2 / span 2;
+  grid-row: 2;
+  border: rgb(212, 39, 255) 2px solid;
+}
+
+.grass {
+  grid-column: 1;
+  grid-row: 2;
+  border: rgb(39, 255, 75) 2px solid;
+}
+
+.moon {
+  grid-column: 1;
+  grid-row: 1;
+  border: rgb(255, 202, 28) 2px solid;
+}
+
+.cloud {
+  grid-column: 1 / span 3;
+  grid-row: 1;
+  border: rgb(138, 138, 138) 2px solid;
+  z-index: 1;
+}
