@@ -4,12 +4,25 @@
 @import "bioLudo.css";
 @import "timeline.css";
 @import "about.css";
+@import "burgerMenu.css";
 
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box; /*unngaar padding og margin dytter element og endrer storrelse*/
 }
+
+:root {
+  --primary-color: #89bbfe;
+  --secondary-color: #ff9999;
+  --tertiary-color: #ffcc99;
+  --bg-color: #f1f3f6;
+  --btn-color: #ff70a6;
+  --overlay-color: rgba(241, 243, 246, 0.9);
+  --htext-color: #302727;
+  --menu-speed: 0.75s;
+}
+
 h1 {
   font-family: "Amatic SC", cursive;
   font-size: 100px;
@@ -35,33 +48,21 @@ p {
 header {
   display: flex;
   justify-content: flex-end;
-  position: absolute;
+  position: fixed;
   border: 3px orange solid;
   width: 1330px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 10;
+  z-index: 2;
+  padding-top: 20px;
 }
 
 button:focus {
   outline: none;
 }
 
-.burger {
-  /* background: url("../assets/svg/burger.svg");
-  background-repeat: no-repeat;
-  background-size: auto; */
-  width: 100px;
-  height: 100px;
-  border-radius: 106px;
-  background: #f1f3f6;
-  box-shadow: 10px 10px 27px #d4d6d8, -10px -10px 27px #ffffff;
-  border: none;
-  cursor: pointer;
-}
-
 body {
-  background-color: #f1f3f6;
+  background-color: var(--bg-color);
 }
 
 .container {
@@ -77,12 +78,11 @@ body {
 footer {
   display: flex;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   border: 3px orange solid;
   width: 1330px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 10;
   bottom: 0;
 }
 
