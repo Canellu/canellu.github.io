@@ -5,6 +5,7 @@
 @import "timeline.css";
 @import "about.css";
 @import "burgerMenu.css";
+@import "bgvector.css";
 
 * {
   margin: 0px;
@@ -50,10 +51,10 @@ header {
   justify-content: flex-end;
   position: fixed;
   border: 3px orange solid;
-  width: 1330px;
+  width: 1530px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 2;
+  z-index: 19;
   padding-top: 20px;
 }
 
@@ -69,7 +70,7 @@ body {
   display: flex;
   justify-content: center; /*fra venstre til hoyre*/
   align-items: center; /*fra top til bottom*/
-  width: 1330px;
+  width: 1530px;
   height: 100vh;
   margin: auto;
   border: blue 2px solid;
@@ -80,7 +81,7 @@ footer {
   justify-content: center;
   position: fixed;
   border: 3px orange solid;
-  width: 1330px;
+  width: 1530px;
   left: 50%;
   transform: translateX(-50%);
   bottom: 0;
