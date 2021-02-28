@@ -6,6 +6,7 @@
 @import "about.css";
 @import "burgerMenu.css";
 @import "bgvector.css";
+@import "line.css";
 
 * {
   margin: 0px;
@@ -27,17 +28,20 @@
 h1 {
   font-family: "Amatic SC", cursive;
   font-size: 100px;
+  color: var(--htext-color);
 }
 
 h2 {
   font-family: "Amatic SC", cursive;
   font-size: 60px;
   font-weight: 100;
+  color: var(--htext-color);
 }
 
 h3 {
   font-family: "Amatic SC", cursive;
   font-size: 50px;
+  color: var(--htext-color);
 }
 
 p {
@@ -48,14 +52,14 @@ p {
 
 header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   position: fixed;
   border: 3px orange solid;
   width: 1530px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 19;
-  padding-top: 20px;
+  padding: 20px;
 }
 
 button:focus {
@@ -67,13 +71,36 @@ body {
 }
 
 .container {
+  position: relative;
   display: flex;
   justify-content: center; /*fra venstre til hoyre*/
   align-items: center; /*fra top til bottom*/
   width: 1530px;
   height: 100vh;
   margin: auto;
-  border: blue 2px solid;
+  border: blue 8px solid;
+}
+
+.sideInfo {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.strek {
+  border: rgb(0, 0, 0) 1px solid;
+  width: 80%;
+}
+
+.sideInfo h3 {
+  letter-spacing: 12px;
+  padding-left: 12px;
+  font-size: 35px;
 }
 
 footer {
@@ -85,6 +112,7 @@ footer {
   left: 50%;
   transform: translateX(-50%);
   bottom: 0;
+  padding: 20px;
 }
 
 .paw {
@@ -95,4 +123,52 @@ footer {
   box-shadow: 10px 10px 27px #d4d6d8, -10px -10px 27px #ffffff;
   border: none;
   cursor: pointer;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes moveDown {
+  0% {
+    transform: translateY(-800px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(800px);
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(800px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }

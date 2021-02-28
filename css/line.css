@@ -1,0 +1,23 @@
+#line path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  animation: line-anim 4s ease-in, line-anim-out 2s 7s linear forwards;
+}
+
+@keyframes line-anim {
+  0% {
+    stroke-dashoffset: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes line-anim-out {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -1;
+  }
+}

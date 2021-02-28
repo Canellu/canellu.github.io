@@ -7,8 +7,8 @@
   position: fixed;
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  z-index: -1;
+  overflow: visible;
+  z-index: -10;
 }
 
 .figurV {
@@ -30,7 +30,7 @@
 .V1 {
   animation: rotation 50s infinite linear;
   position: absolute;
-  height: 15vh;
+  height: 10vh;
   overflow: hidden;
   bottom: 80%;
   left: 10%;
@@ -40,7 +40,7 @@
   position: absolute;
   overflow: hidden;
   bottom: 55%;
-  left: 3%;
+  left: 5%;
   height: 5vh;
 }
 .V3 {
@@ -55,8 +55,7 @@
   position: absolute;
   overflow: hidden;
   bottom: 10%;
-  left: 5%;
-  height: 10vh;
+  left: 10%;
 }
 
 .H1 {
@@ -71,7 +70,7 @@
   position: absolute;
   overflow: hidden;
   bottom: 15%;
-  right: -1%;
+  right: -3%;
   height: 10vh;
 }
 

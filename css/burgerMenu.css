@@ -94,8 +94,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
   z-index: 18;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .menu > div {
@@ -120,6 +121,8 @@
   font-family: "Amatic SC", cursive;
   font-size: 80px;
   padding: 1.5rem;
+  letter-spacing: 20px;
+  font-weight: 700;
 }
 
 .menu ul {

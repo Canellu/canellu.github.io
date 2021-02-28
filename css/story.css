@@ -3,39 +3,76 @@
   grid-gap: 20px;
   grid-template-columns: repeat(3, 1fr); /*3格4线*/
   grid-template-rows: 1fr 1fr;
+  height: 70%;
+  padding: 20px;
+}
+
+.cover {
+  width: 750px;
+  height: 640px;
   border: 2px solid black;
-  width: 100%;
+  opacity: 0;
+  /* animation: moveDown 0.5s ease-in; */
 }
 
-.lunadoCover {
-  width: 800px;
+.coverAnim {
+  animation: moveDown 0.5s 0.5s ease-in forwards;
 }
 
-.item1 {
+.storyBilde {
   grid-column: 1 / span 2; /*从第一格开始过去占两格*/
   grid-row: 1 / span 2;
-  border: 2px solid red;
-  margin-left: 100px;
+  margin-left: 50px;
+  margin-top: 100px;
 }
 
-.item2 {
+.bildeBg {
+  margin-top: 170px;
+  width: 750px;
+  height: 620px;
+  grid-column: 1 / span 2; /*从第一格开始过去占两格*/
+  grid-row: 1 / span 2;
+  background-color: var(--primary-color);
+  z-index: -1;
+  opacity: 0;
+}
+
+.bildeBgAnim {
+  animation: moveUp 0.5s 0.5s ease-in forwards;
+}
+
+.storyTittel {
   grid-column: 2 / span 2;
   grid-row: 1 / 2; /*从第一条线到第二条线*/
   z-index: 1;
-  border: 2px solid greenyellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  letter-spacing: 15px;
+  padding-top: 100px;
+  padding-left: 280px;
 }
 
-.item3 {
+.textColor {
+  background-color: var(--secondary-color);
+}
+
+.stories {
   grid-column: 3 / span 1;
   grid-row: 2 / 3;
-  border: 2px solid blueviolet;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 580px;
+  height: 300px;
+  padding: 20px;
+  background-color: var(--tertiary-color);
+  margin-top: 40px;
+  margin-right: 20px;
 }
 
-.picBg {
-  margin-top: 100px;
-  width: 850px;
-  grid-column: 1 / span 2; /*从第一格开始过去占两格*/
-  grid-row: 1 / span 2;
-  border: 2px solid rgb(12, 150, 241);
-  z-index: -1;
+.stories p {
+  font-size: 20px;
 }

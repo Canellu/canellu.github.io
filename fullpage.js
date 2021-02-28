@@ -4649,4 +4649,47 @@ const fp = new fullpage("#fullpage", {
     "TimelineGallery",
     "AboutUs",
   ],
+  onLeave: function (origin, destination, direction) {
+    // Kom til siden, add animation class
+    switch (destination.anchor) {
+      case "Storytell":
+        storyCover.classList.add("coverAnim");
+        storyBildeBg.classList.add("bildeBgAnim");
+        break;
+      case "StatisticsLuna":
+        // code block
+        break;
+      case "StatisticsLudo":
+        // code block
+        break;
+      case "TimelineGallery":
+        // code block
+        break;
+      case "AboutUs":
+        // code block
+        break;
+    }
+
+    // Gå vekk fra siden, remove animation class
+    switch (origin.anchor) {
+      case "Storytell":
+        setTimeout(() => {
+          storyCover.classList.remove("coverAnim");
+          storyBildeBg.classList.remove("bildeBgAnim");
+        }, 500);
+        break;
+      case "StatisticsLuna":
+        // code block
+        break;
+      case "StatisticsLudo":
+        // code block
+        break;
+      case "TimelineGallery":
+        // code block
+        break;
+      case "AboutUs":
+        // code block
+        break;
+    }
+  },
 });
