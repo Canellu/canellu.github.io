@@ -7,6 +7,7 @@ var links = document.querySelectorAll(".menu li");
 var form = document.querySelector("#toFirestoreForm");
 var storyCover = document.querySelector(".cover");
 var storyBildeBg = document.querySelector(".bildeBg");
+var navnboks = document.querySelector(".navnBoks");
 
 links.forEach((e) => {
   e.addEventListener("click", () => {

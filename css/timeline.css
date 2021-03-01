@@ -3,15 +3,17 @@
   display: flex;
   justify-content: center; /*fra venstre til hoyre*/
   align-items: center; /*fra top til bottom*/
-  width: 1330px;
-  height: 100vh;
+  width: 100%;
+  height: 80%;
   margin: auto;
-  border: 2px solid black;
+  border: 12px solid rgb(156, 8, 8);
+  padding: 30px;
 }
 
 .glassFrame {
   /*parent glassframe inneholder traad og picContainer*/
   position: relative;
+  overflow: hidden;
   border: 5px solid yellowgreen;
   width: 1200px;
   height: 900px;
@@ -29,15 +31,8 @@
 }
 
 .picContainer {
-  display: flex;
-  padding: auto;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: nowrap; /*多余的堆到框外*/
+  position: relative;
   border: 2px solid blue;
-  width: 1200px;
-  height: 900px;
 }
 
 .test1 {

@@ -4640,6 +4640,7 @@ if (window.jQuery && window.fullpage) {
 const fp = new fullpage("#fullpage", {
   licenseKey: "20ppTqD#p6",
   autoScrolling: true,
+
   //Anchors are used to navigate
   anchors: [
     "Homepage",
@@ -4648,6 +4649,7 @@ const fp = new fullpage("#fullpage", {
     "StatisticsLudo",
     "TimelineGallery",
     "AboutUs",
+    "test",
   ],
   onLeave: function (origin, destination, direction) {
     // Kom til siden, add animation class

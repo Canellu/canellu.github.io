@@ -8,11 +8,11 @@
   flex-direction: column;
   justify-content: center; /*fra venstre til hoyre*/
   align-items: center; /*fra top til bottom*/
-  width: 1330px;
-  height: 100vh;
+  width: 100%;
+  height: 80%;
   margin: auto;
-  border: 2px solid black;
-  padding: 50px;
+  border: 10px solid rgb(73, 3, 3);
+  padding: 30px;
 }
 
 .mailBox {
@@ -37,25 +37,73 @@
   z-index: 0;
   transform: matrix(0.9962, -0.08716, 0.08716, 0.9962, 0, 0);
 }
-#toFirestoreForm > * {
+
+.navnBoks,
+.emailBoks {
+  position: relative;
+  height: 15%;
+  padding-bottom: 20px;
   width: 80%;
   border: none;
-  border-bottom: rgb(109, 109, 109) 2px solid;
+  border-bottom: rgb(110, 110, 110) 2px solid;
   font-size: 25px;
   font-family: "Montserrat", sans-serif;
   color: var(--htext-color);
   font-weight: 700;
 }
 
-.navnBoks,
-.emailBoks {
-  height: 15%;
-  padding-bottom: 20px;
+.focus-border1 {
+  position: absolute;
+  height: 4px;
+  transition: 0.4s;
+  bottom: 426px;
+  width: 10%;
+}
+
+.focus-border2 {
+  position: absolute;
+  height: 4px;
+  transition: 0.4s;
+  bottom: 339px;
+  width: 10%;
+}
+
+.navnBoks:focus ~ .focus-border1 {
+  width: 80%;
+  transition: 0.4s;
+  background-color: #3399ff;
+}
+
+.emailBoks:focus ~ .focus-border2 {
+  width: 80%;
+  transition: 0.4s;
+  background-color: #3399ff;
 }
 
 .tekstBoks {
+  position: relative;
   height: 200px;
   resize: none;
+  width: 80%;
+  border: none;
+  border-bottom: rgb(110, 110, 110) 2px solid;
+  font-size: 25px;
+  font-family: "Montserrat", sans-serif;
+  color: var(--htext-color);
+  font-weight: 700;
+}
+
+.focus-border3 {
+  position: absolute;
+  height: 4px;
+  transition: 0.4s;
+  bottom: 112px;
+  width: 10%;
+}
+.tekstBoks:focus ~ .focus-border3 {
+  width: 80%;
+  transition: 0.4s;
+  background-color: #3399ff;
 }
 
 ::placeholder {
@@ -82,10 +130,10 @@
 }
 #about h3:first-child {
   position: absolute;
-  top: 330px;
+  top: 200px;
 }
 
 #about h3:last-child {
   position: absolute;
-  top: 1000px;
+  top: 850px;
 }

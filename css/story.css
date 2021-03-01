@@ -3,8 +3,10 @@
   grid-gap: 20px;
   grid-template-columns: repeat(3, 1fr); /*3格4线*/
   grid-template-rows: 1fr 1fr;
-  height: 70%;
-  padding: 20px;
+  width: 100%;
+  height: 80%;
+  padding: 30px;
+  /* border: 12px solid rgb(156, 8, 8); */
 }
 
 .cover {
