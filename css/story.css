@@ -1,17 +1,20 @@
 #story {
+  position: relative;
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(3, 1fr); /*3格4线*/
   grid-template-rows: 1fr 1fr;
   width: 100%;
-  height: 80%;
-  padding: 30px;
+  height: 70%;
+  padding: 10px;
   /* border: 12px solid rgb(156, 8, 8); */
 }
 
 .cover {
-  width: 750px;
-  height: 640px;
+  width: 80%;
+  height: 80%;
+  min-width: 600px;
+  min-height: 600px;
   border: 2px solid black;
   opacity: 0;
   /* animation: moveDown 0.5s ease-in; */
@@ -22,16 +25,24 @@
 }
 
 .storyBilde {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
   grid-column: 1 / span 2; /*从第一格开始过去占两格*/
   grid-row: 1 / span 2;
-  margin-left: 50px;
-  margin-top: 100px;
+  top: 80px;
+  left: 40px;
 }
 
 .bildeBg {
-  margin-top: 170px;
-  width: 750px;
-  height: 620px;
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  min-width: 600px;
+  min-height: 600px;
+  top: 110px;
+  left: 10px;
   grid-column: 1 / span 2; /*从第一格开始过去占两格*/
   grid-row: 1 / span 2;
   background-color: var(--primary-color);
@@ -44,6 +55,7 @@
 }
 
 .storyTittel {
+  position: absolute;
   grid-column: 2 / span 2;
   grid-row: 1 / 2; /*从第一条线到第二条线*/
   z-index: 1;
@@ -51,9 +63,13 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
+  right: 0px;
+  bottom: 20px;
+}
+
+.storyTittel h2 {
   letter-spacing: 15px;
-  padding-top: 100px;
-  padding-left: 280px;
+  padding: 8px;
 }
 
 .textColor {
@@ -62,20 +78,102 @@
 }
 
 .stories {
+  position: absolute;
   grid-column: 3 / span 1;
   grid-row: 2 / 3;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  width: 550px;
-  height: 300px;
-  padding: 40px 0px;
+  bottom: 70px;
+  right: 50px;
+  width: 110%;
+  min-height: 60%;
+  padding: 10px;
   background-color: var(--tertiary-color);
-  margin-top: 40px;
-  margin-right: 60px;
+  z-index: 1;
 }
 
-.stories p {
-  font-size: 20px;
+@media screen and (max-width: 1200px) {
+  #story {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .storyTittel {
+    top: 0px;
+    right: 10px;
+    display: block;
+  }
+
+  .storyTittel h2 {
+    letter-spacing: 10px;
+    font-size: 3rem;
+  }
+
+  .stories {
+    right: 20px;
+    width: auto;
+    bottom: 30px;
+    min-height: 15%;
+    display: block;
+  }
+
+  .stories p {
+    font-size: 15px;
+    padding: 5px;
+    text-align: center;
+  }
+
+  .cover,
+  .bildeBg {
+    width: 60%;
+    height: 80%;
+  }
+}
+
+/*pad*/
+@media screen and (max-width: 768px) {
+  .storyTittel h2 {
+    font-size: 2rem;
+  }
+
+  .stories {
+    min-height: 15%;
+  }
+
+  .stories p {
+    font-size: 12px;
+    padding: 3px;
+  }
+
+  .cover {
+    min-width: 420px;
+    min-height: 420px;
+  }
+
+  .bildeBg {
+    min-width: 420px;
+    min-height: 420px;
+  }
+}
+
+/*phone*/
+@media screen and (max-width: 480px) {
+  .storyTittel h2 {
+    font-size: 25px;
+    letter-spacing: 5px;
+  }
+
+  .cover {
+    min-width: 300px;
+    min-height: 300px;
+  }
+
+  .bildeBg {
+    min-width: 300px;
+    min-height: 300px;
+  }
 }

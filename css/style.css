@@ -27,13 +27,13 @@
 
 h1 {
   font-family: "Amatic SC", cursive;
-  font-size: 100px;
+  font-size: 7rem;
   color: var(--htext-color);
 }
 
 h2 {
   font-family: "Amatic SC", cursive;
-  font-size: 60px;
+  font-size: 4rem;
   font-weight: 100;
   color: var(--htext-color);
 }
@@ -46,7 +46,7 @@ h3 {
 
 p {
   font-family: "Montserrat", sans-serif;
-  font-size: 20px;
+  font-size: 1rem;
   font-weight: bold;
 }
 
@@ -55,7 +55,8 @@ header {
   justify-content: space-between;
   position: fixed;
   border: 3px orange solid;
-  width: 1530px;
+  width: 100vw;
+  max-width: 1530px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 19;
@@ -75,7 +76,8 @@ body {
   display: flex;
   justify-content: center; /*fra venstre til hoyre*/
   align-items: center; /*fra top til bottom*/
-  width: 1530px;
+  width: 100vw;
+  max-width: 1530px;
   height: 100vh;
   margin: auto;
   border: blue 8px solid;
@@ -108,7 +110,8 @@ footer {
   justify-content: center;
   position: fixed;
   border: 3px orange solid;
-  width: 1530px;
+  width: 100vw;
+  max-width: 1530px;
   left: 50%;
   transform: translateX(-50%);
   bottom: 0;
@@ -170,5 +173,36 @@ footer {
   100% {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+
+/*pad*/
+@media screen and (max-width: 768px) {
+  .menu-wrap .toggler {
+    width: 60px;
+    height: 60px;
+  }
+  .burger {
+    width: 60px;
+    height: 60px;
+    justify-content: space-around;
+  }
+
+  .burger > div {
+    height: 7px;
+  }
+
+  .burger > div::before,
+  .burger > div::after {
+    height: 7px;
+    top: -12px;
+  }
+
+  .burger > div::after {
+    top: 12px;
+  }
+
+  .menu li {
+    letter-spacing: 15px;
   }
 }

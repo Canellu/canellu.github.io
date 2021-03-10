@@ -48,8 +48,9 @@
   font-family: "Montserrat";
   font-weight: 600;
   width: 300px;
-  height: 800px;
+  height: 400px;
   background-color: rgb(128, 128, 128);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.203);
   display: flex;
   justify-content: center;
   align-items: center;

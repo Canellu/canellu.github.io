@@ -12,27 +12,29 @@
   grid-column: 1;
   grid-row: 1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-end;
-  padding-left: 300px;
+  padding-right: 50px;
 }
 
 .ludoFigur {
   grid-column: 3;
   grid-row: 1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-end;
-  padding-right: 250px;
+  padding-left: 50px;
 }
 
 .Ludo {
-  height: 75%;
+  max-width: 370px;
+  width: 80%;
   animation: moveDown 1.5s cubic-bezier(0.13, 0.05, 0.55, 1.36);
 }
 
 .Luna {
-  height: 90%;
+  max-width: 250px;
+  width: 55%;
   animation: moveDown 1.5s cubic-bezier(0.13, 0.05, 0.55, 1.36);
 }
 
@@ -44,7 +46,6 @@
   align-items: center;
   padding-right: 30px;
   padding-bottom: 40px;
-  letter-spacing: 50px;
   animation-name: fadeIn;
   animation-duration: 4s;
   animation-timing-function: ease;
@@ -70,7 +71,7 @@
 }
 
 .og h1 {
-  font-size: 60px;
+  font-size: 4rem;
 }
 
 .ludoTittel {
@@ -79,7 +80,6 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  letter-spacing: 50px;
   padding-left: 60px;
   padding-bottom: 40px;
   animation-name: fadeIn;
@@ -90,16 +90,25 @@
   opacity: 0;
 }
 
+.ludoTittel h1 {
+  letter-spacing: 50px;
+}
+
+.lunaTittel h1 {
+  letter-spacing: 50px;
+}
+
 .ludoTittel h2 {
-  font-size: 150px;
+  font-size: 9rem;
   font-weight: bold;
   padding-bottom: 30px;
 }
 
 .lunaTittel h2 {
   padding-bottom: 30px;
-  font-size: 150px;
+  font-size: 9rem;
   font-weight: bold;
+  letter-spacing: 50px;
 }
 
 .traad {
@@ -126,7 +135,7 @@
 .flyR {
   position: absolute;
   right: 40px;
-  top: -20px;
+  top: -60px;
   transform: rotate(70deg);
   offset-path: path(
     "M0.972168 581.453C0.972168 581.453 49.1852 421.351 131.264 437.859C213.343 454.366 253.476 487.81 333.741 469.415C414.007 451.021 664.671 1.15033 664.671 1.15033"
@@ -143,5 +152,137 @@
   }
   to {
     offset-distance: 100%;
+  }
+}
+
+/*laptop*/
+@media screen and (max-width: 1200px) {
+  .ludoTittel h1 {
+    font-size: 5rem;
+  }
+
+  .lunaTittel h1 {
+    font-size: 5rem;
+  }
+
+  .og h1 {
+    font-size: 3rem;
+  }
+
+  .ludoTittel h2 {
+    font-size: 7rem;
+  }
+
+  .lunaTittel h2 {
+    font-size: 7rem;
+  }
+
+  .traad svg {
+    width: 990px;
+  }
+}
+
+/*pad*/
+@media screen and (max-width: 768px) {
+  .ludoTittel h1 {
+    font-size: 4rem;
+    letter-spacing: 15px;
+  }
+
+  .lunaTittel h1 {
+    font-size: 4rem;
+    letter-spacing: 15px;
+  }
+
+  .og h1 {
+    font-size: 2rem;
+  }
+
+  .ludoTittel h2 {
+    font-size: 6rem;
+  }
+
+  .lunaTittel h2 {
+    font-size: 6rem;
+    letter-spacing: 15px;
+  }
+
+  .traad svg {
+    width: 700px;
+  }
+
+  .flyR {
+    right: -20px;
+    top: -50px;
+  }
+
+  svg {
+    width: 55px;
+  }
+
+  .Luna {
+    min-width: 140px;
+  }
+
+  .Ludo {
+    overflow: hidden;
+    min-width: 200px;
+  }
+}
+
+/*phone*/
+@media screen and (max-width: 480px) {
+  #home {
+    grid-template-columns: 1fr 20px 1fr;
+  }
+
+  .lunaFigur {
+  }
+
+  .ludoFigur {
+    padding-left: 0px;
+  }
+
+  .Ludo {
+    min-width: 165px;
+  }
+
+  .Luna {
+    min-width: 120px;
+  }
+
+  .traad {
+    visibility: hidden;
+  }
+
+  .flyR {
+    visibility: hidden;
+  }
+
+  .ludoTittel {
+    padding-left: 30px;
+  }
+
+  .ludoTittel h1 {
+    font-size: 4rem;
+    letter-spacing: 5px;
+  }
+
+  .lunaTittel h1 {
+    font-size: 4rem;
+    letter-spacing: 5px;
+  }
+
+  .og h1 {
+    font-size: 2rem;
+  }
+
+  .ludoTittel h2 {
+    font-size: 6rem;
+  }
+
+  .lunaTittel h2 {
+    font-size: 6rem;
+    letter-spacing: 5px;
   }
 }
