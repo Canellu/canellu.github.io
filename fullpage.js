@@ -4649,9 +4649,15 @@ const fp = new fullpage("#fullpage", {
     "StatisticsLudo",
     "TimelineGallery",
     "AboutUs",
-    "test",
   ],
   onLeave: function (origin, destination, direction) {
+    if (origin.anchor == "TimelineGallery" && direction == "down") {
+      pawButton.classList.add("pawButtonEnd");
+    }
+    if (origin.anchor == "AboutUs" && direction == "up") {
+      pawButton.classList.remove("pawButtonEnd");
+    }
+
     // Kom til siden, add animation class
     switch (destination.anchor) {
       case "Storytell":
@@ -4694,4 +4700,28 @@ const fp = new fullpage("#fullpage", {
         break;
     }
   },
+});
+
+/*Links functionality
+  Move to page when clicking navigation links
+  Also add or remove pawButtonEnd on certain pages */
+document.getElementById("toHome").addEventListener("click", (e) => {
+  // fullpage_api.moveTo("Homepage", 1);
+  pawButton.classList.remove("pawButtonEnd");
+});
+document.getElementById("toAbout").addEventListener("click", () => {
+  // fullpage_api.moveTo("AboutUs", 1);
+  pawButton.classList.add("pawButtonEnd");
+});
+
+/* Pawbutton functionality */
+const pawButton = document.querySelector(".pawButton");
+pawButton.addEventListener("click", () => {
+  const url = window.location.href.split("#")[1];
+
+  //Ternary operator ("Single line if")
+  //Syntax: condition ? true : false
+  url == "AboutUs"
+    ? fullpage_api.moveTo("Homepage", 1)
+    : fullpage_api.moveSectionDown();
 });

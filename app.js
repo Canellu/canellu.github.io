@@ -45,10 +45,16 @@ sendKnapp.addEventListener("click", sendToFirestore);
 function sendToFirestore() {
   console.log("KJORER KNAPP FUNC");
   if (melding.value == "") {
-    alert("You haven't written anything to Luna&Ludo :(");
+    // alert("You haven't written anything to Luna&Ludo :(");
   } else {
     console.log("ikke tom");
     addMessages();
     form.reset();
   }
+
+  //Animation on click
+  sendKnapp.classList.add("flyAnimation");
+  setTimeout(() => {
+    sendKnapp.classList.remove("flyAnimation");
+  }, 5000);
 }

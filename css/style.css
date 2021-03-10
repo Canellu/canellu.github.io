@@ -7,6 +7,7 @@
 @import "burgerMenu.css";
 @import "bgvector.css";
 @import "line.css";
+@import "paw.css";
 
 * {
   margin: 0px;
@@ -116,16 +117,6 @@ footer {
   transform: translateX(-50%);
   bottom: 0;
   padding: 20px;
-}
-
-.paw {
-  width: 100px;
-  height: 100px;
-  border-radius: 106px;
-  background: #f1f3f6;
-  box-shadow: 10px 10px 27px #d4d6d8, -10px -10px 27px #ffffff;
-  border: none;
-  cursor: pointer;
 }
 
 @keyframes fadeIn {
