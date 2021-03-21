@@ -1,37 +1,41 @@
-d<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://unpkg.com/scrollbooster@2/dist/scrollbooster.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    
+    <!-- FIRBASE -->
     <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.7.5/glider.min.js" integrity="sha512-yae3h50zbnmT/1Lt5AsOAsFNCsLTYaUdQ05Y+i4jX37o2/oYbfrqxaUfNjgFvCeUCf6QJMHusgQGA7U9qBUxMQ==" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.7.5/glider.css" integrity="sha512-xcz2kgNDovRs9/wYWii2XSBEDlpaTq99iewiGN3PR/pNnPaSDiw6wHpXU0kFyonevdVj/MkeesxMII8sgolFCQ==" crossorigin="anonymous" />
+
+    <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
    
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Montserrat:wght@500;600&display=swap");
-    </style>
 
     <title>Luna & Ludo</title>
   </head>
-  <header>
-    <div class="ikon"></div>
-    <div class="menu-wrap">
-      <input type="checkbox" class="toggler" />
-      <div class="burger"><div></div></div>
-    </div>
-  </header>
+
+  
 
   <body>
+
+    <!-- Top bar -->
+    <header>
+      <div class="ikon"></div>
+      <div class="menu-wrap">
+        <input type="checkbox" class="toggler" />
+        <div class="burger"><div></div></div>
+      </div>
+    </header>
+
+
+    <!-- Navigation Modal-->
     <div class="menu">
       <div>
         <ul>
-
-          
-    
           <li><a href="#Homepage" id="toHome">Home</a></li>
           <li><a href="#Storytell" id="toStory">Story</a></li>
           <li><a href="#StatisticsLuna" id="toLuna">Bio</a></li>
@@ -40,6 +44,9 @@ d<!DOCTYPE html>
         </ul>
       </div>
     </div>
+
+
+    <!-- Background elements -->
     <div class="bgFigur">
       <div class="figurV">
         <img class="V1" src="assets/svg/v1.svg" alt="bakgrunnsfigurer" />
@@ -52,9 +59,14 @@ d<!DOCTYPE html>
         <img class="H2" src="assets/svg/h1.svg" alt="bakgrunnsfigurer" />
       </div>
     </div>
-    <div id="fullpage">
-      <section class="section">
-        
+
+
+   
+    <div id="fullpage">  <!-- Fullpage start -->
+
+<!----------------------------------  Home  ----------------------------------->
+
+      <section class="section"> 
         <div class="container">
           <div class="sideInfo">
             <div class="strek"></div>
@@ -113,10 +125,10 @@ d<!DOCTYPE html>
             </div>
           </div>
         </div>
-        
-          
+   
       </section>
-      <!--Home-->
+ 
+<!----------------------------------  Story  ----------------------------------->
 
       <section class="section">
         <div class="container">
@@ -152,7 +164,9 @@ d<!DOCTYPE html>
           </div>
         </div>
       </section>
-      <!--Story-->
+ 
+
+<!----------------------------------  Luna Biography  ----------------------------------->
 
       <section class="section">
         <div class="container">
@@ -181,7 +195,8 @@ d<!DOCTYPE html>
           </div>
         </div>
       </section>
-      <!--BioLuna-->
+
+<!----------------------------------  Ludo Biography  ----------------------------------->
 
       <section class="section">
         <div class="container">
@@ -209,9 +224,12 @@ d<!DOCTYPE html>
           </div>
         </div>
       </section>
-      <!--BioLudo-->
 
-      <section class="section">
+
+
+<!----------------------------------  Timeline  ----------------------------------->
+    
+<section class="section">
         <div class="container">
           <div class="sideInfo">
             <div class="strek"></div>
@@ -245,16 +263,14 @@ d<!DOCTYPE html>
               <div class="t7"><h2>UUUUUUUUUUUUU</h2></div>
                   
             </div>
-          
-
-
-           
-
 
           </div>
         </div>
       </section>
-      <!--Timeline-->
+
+
+<!----------------------------------  About  ----------------------------------->
+
 
       <section class="section">
         <div class="container">
@@ -282,26 +298,29 @@ d<!DOCTYPE html>
             <h3>LET'S BE FRIENDS</h3>
           </div>
         </div>
-
-       
+ 
       </section>
-      <!--About-->
-
-    </div>
 
 
+    </div> <!-- Fullpage End -->
+
+    
     
 
 
 
 
+    <!-- Navigation button -->
     <footer>
       <button class="pawButton"></button>
     </footer>
 
+
+    <!-- Scripts -->
     <script src="fullpage.js"></script>
     <script src="database.js"></script>
     <script src="app.js"></script>
+    
   </body>
 
   
