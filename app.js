@@ -58,3 +58,35 @@ function sendToFirestore() {
     sendKnapp.classList.remove("flyAnimation");
   }, 5000);
 }
+
+// Click&Drag logic
+const slider = document.querySelector(".glassWrapper");
+let isDown = false;
+let startX;
+let scrollTop;
+let scrollSpeed = 1;
+
+slider.addEventListener("mousedown", (e) => {
+  isDown = true;
+  startX = e.pageX - slider.offsetLeft; // Position of click
+  scrollTop = slider.scrollTop; // Position of scrollbar
+  slider.classList.add("grabbing");
+});
+
+slider.addEventListener("mouseleave", (e) => {
+  isDown = false;
+  slider.classList.remove("grabbing");
+});
+
+slider.addEventListener("mouseup", (e) => {
+  isDown = false;
+  slider.classList.remove("grabbing");
+});
+
+slider.addEventListener("mousemove", (e) => {
+  if (!isDown) return; // stop function from running when not holding down
+  e.preventDefault(); // Prevent unwanted behaviour like marking text etc.
+  const x = e.pageX - slider.offsetLeft; // Current position of mouse
+  const walk = (x - startX) * scrollSpeed; // calculate pixels moved from initial click
+  slider.scrollTop = scrollTop - walk;
+});

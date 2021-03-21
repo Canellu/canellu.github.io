@@ -106,7 +106,7 @@ body {
   font-size: 35px;
 }
 
-footer {
+/* footer {
   display: flex;
   justify-content: center;
   position: fixed;
@@ -117,7 +117,7 @@ footer {
   transform: translateX(-50%);
   bottom: 0;
   padding: 20px;
-}
+} */
 
 @keyframes fadeIn {
   0% {

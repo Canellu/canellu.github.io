@@ -1,61 +1,117 @@
 #timeline {
-  /*Timeline inneholder glassFrame*/
   width: 100%;
   height: 80%;
   margin: auto;
-  border: 4px solid red;
-  /* padding: 30px; */
+  overflow: hidden;
 }
 
-.traad2 {
-  /*absolute moves relative to its nearest positioned parent*/
-  position: absolute;
-  border: tomato solid 2px;
-  width: 1200px;
-  height: 100px;
-  top: 50%;
-  bottom: -50%;
-  z-index: -2;
-}
-
-.glider-contain {
-  height: 100%;
-  width: 80%;
-  background-color: rgba(79, 78, 113, 0.203);
-}
-
-.glider-next {
-  right: -50px;
-}
-.glider-prev {
-  left: -50px;
-}
-.test {
-  font-size: 100px;
-  font-family: "Montserrat";
-  font-weight: 600;
-  letter-spacing: 1.2rem;
+.glassWrapper {
+  position: relative;
+  margin-top: 90px;
+  padding-right: 250px;
+  background: rgba(196, 179, 211, 0.15);
+  box-shadow: 0 5px 20px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
-  background: rgb(194, 194, 194);
-  /* border: 2px solid black; */
-  height: 76vh !important;
+
+  transform: rotate(-90deg) translate3d(0, -100vh, 0);
+  transform-origin: right top;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  width: 55%;
+  height: 195%;
+  perspective: 1px;
+  transform-style: preserve-3d;
+}
+.grabbing {
+  cursor: grabbing;
 }
 
-.bilde {
-  font-size: 40px;
-  font-family: "Montserrat";
-  font-weight: 600;
-  width: 300px;
-  height: 400px;
-  background-color: rgb(128, 128, 128);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.203);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
 }
 
-.glider-dots {
-  border: 2px solid green;
+.timeTraad {
+  transform: rotate(90deg) scale(9) translateX(300px) translateY(0vh);
+}
+
+.t1 h2 {
+  transform: rotate(90deg) translateX(200px) translateY(8vh);
+}
+
+.t2 h2 {
+  transform: rotate(90deg) translateX(50px) translateY(-27vh);
+}
+
+.t3 h2 {
+  transform: rotate(90deg) translateX(-280px) translateY(-12vh);
+}
+
+.t4 h2 {
+  transform: rotate(90deg) translateX(-450px) translateY(15vh);
+}
+
+.t5 h2 {
+  transform: rotate(90deg) translateX(-800px) translateY(-23vh);
+}
+
+.t6 h2 {
+  transform: rotate(90deg) translateX(-120px) translateY(10vh);
+}
+
+.t7 h2 {
+  transform: rotate(90deg) translateX(-200px) translateY(-25vh);
+}
+
+.slower {
+  transform: rotate(80deg) translateZ(-0.3px) scale(1.1) translateX(100%)
+    translateY(-10vh);
+}
+.slower1 {
+  transform: rotate(87deg) translateZ(0px) scale(0.75) translateX(70%)
+    translateY(-18vh);
+}
+.slower2 {
+  transform: rotate(95deg) translateZ(-0.1px) scale(0.9) translateX(-20%)
+    translateY(-8vh);
+}
+
+.slower3 {
+  transform: rotate(92deg) translateZ(-0.2px) scale(1) translateX(0%)
+    translateY(-12vh);
+}
+
+.slower4 {
+  transform: rotate(92deg) translateZ(-0.2px) scale(0.9) translateX(0%)
+    translateY(0vh);
+}
+
+.faster {
+  transform: rotate(93deg) translateZ(0.1px) scale(0.65) translateX(125%)
+    translateY(-12vh);
+}
+
+.faster1 {
+  transform: rotate(90deg) translateZ(0.3px) scale(0.45) translateX(-45%)
+    translateY(6vh);
+}
+.faster2 {
+  transform: rotate(85deg) translateZ(0.1px) scale(0.65) translateX(-50%)
+    translateY(-5vh);
+}
+
+.faster3 {
+  transform: rotate(85deg) translateZ(0.1px) scale(0.65) translateX(-40%)
+    translateY(5vh);
+}
+
+#timeline img {
+  max-width: 45vh;
+  max-height: 40vh;
 }
