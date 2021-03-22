@@ -90,3 +90,20 @@ slider.addEventListener("mousemove", (e) => {
   const walk = (x - startX) * scrollSpeed; // calculate pixels moved from initial click
   slider.scrollTop = scrollTop - walk;
 });
+
+// Start gsap animation when its observed that bio is viewable
+const bioLudo = document.querySelector("#bioLudo");
+var observer = new IntersectionObserver((entries) => {
+  // isIntersecting is true when element and viewport are overlapping
+  // isIntersecting is false when element and viewport don't overlap
+
+  if (entries[0].isIntersecting === true) {
+    gsap.from(".sun", {
+      y: 200,
+      duration: 1.2,
+      delay: 0.4,
+      ease: "elastic",
+    });
+  }
+});
+observer.observe(bioLudo);

@@ -4640,6 +4640,7 @@ if (window.jQuery && window.fullpage) {
 const fp = new fullpage("#fullpage", {
   licenseKey: "20ppTqD#p6",
   autoScrolling: true,
+  scrollingSpeed: 800,
 
   //Anchors are used to navigate
   anchors: [
