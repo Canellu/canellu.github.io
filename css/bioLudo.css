@@ -1,36 +1,49 @@
 #bioLudo {
   width: 100%;
-  height: 100%;
+  height: 80%;
+  grid-gap: 20px;
   overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /*3格4线*/
+  grid-template-rows: 1fr 1fr;
 }
 
-.ludoBioImg {
+.ludoHeader {
+  grid-column: 1;
+  grid-row: 1;
+  position: relative;
+}
+
+.ludoImg {
   background: rgb(230, 230, 230);
   position: absolute;
-  width: 300px;
-  height: 400px;
-  top: 200px;
-  left: 18%;
+  width: 30%;
+  height: 70%;
+  min-width: 150px;
+  top: 50px;
+  left: 26%;
 }
 
 .ludoImgBg {
   position: absolute;
-  top: 250px;
+  width: 47%;
+  min-width: 300px;
+  top: 100px;
   left: 12.8%;
-  transform: scale(1.5);
 }
 
-#bioLudo .ludoTitle {
+#bioLudo h1 {
   position: absolute;
-  top: 300px;
-  left: 42%;
+  top: 150px;
+  left: 65%;
 }
 
 .ludoStats {
-  position: absolute;
-  height: 400px;
-  top: 300px;
-  left: 60%;
+  grid-column: 2;
+  grid-row: 1;
+  position: relative;
+  padding-top: 200px;
+  padding-left: 100px;
   transform: scale(1.1);
 }
 
@@ -43,25 +56,20 @@ tr td:first-child {
 }
 
 .mountainSun {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  bottom: 0;
-  right: 0;
-  border: 2px solid blue;
+  grid-column: 2;
+  grid-row: 2;
   overflow: hidden;
 }
 
 .mountain {
   position: absolute;
-  right: 0;
-  bottom: 0;
-  transform: scale(1.2);
+  right: 0px;
+  bottom: -45px;
 }
 
 .sun {
   position: absolute;
-  bottom: 290px;
-  right: 268px;
+  bottom: 310px;
+  right: 349px;
   transform: scale(1.2);
 }

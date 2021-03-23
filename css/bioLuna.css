@@ -39,16 +39,3 @@
   grid-row: 1 / span 2;
   border: chartreuse 2px solid;
 }
-
-.mountain {
-  grid-column: 2;
-  grid-row: 2;
-  border: darkblue 2px solid;
-}
-
-.sun {
-  grid-column: 2;
-  grid-row: 2;
-  border: rgb(241, 48, 14) 2px solid;
-  height: 100px;
-}

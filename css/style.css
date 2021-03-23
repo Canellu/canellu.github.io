@@ -57,7 +57,7 @@ header {
   display: flex;
   justify-content: space-between;
   position: fixed;
-  border: 3px orange solid;
+  /* border: 3px orange solid; */
   width: 100vw;
   max-width: 1530px;
   left: 50%;
@@ -83,7 +83,7 @@ body {
   max-width: 1530px;
   height: 100vh;
   margin: auto;
-  border: blue 8px solid;
+  /* border: blue 8px solid; */
 }
 
 .sideInfo {
