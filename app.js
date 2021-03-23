@@ -107,3 +107,4 @@ var observer = new IntersectionObserver((entries) => {
   }
 });
 observer.observe(bioLudo);
+//TEST
