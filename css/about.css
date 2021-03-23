@@ -131,7 +131,7 @@
 }
 #about h3:first-child {
   position: absolute;
-  top: 150px;
+  top: 110px;
 }
 
 #about h3:last-child {
@@ -139,7 +139,7 @@
   top: 850px;
 }
 
-.pathTest {
+#pathTest {
   position: absolute;
   bottom: 70px;
   right: -100px;
