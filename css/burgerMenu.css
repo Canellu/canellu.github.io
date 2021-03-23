@@ -1,0 +1,129 @@
+.menu-wrap {
+  position: relative;
+}
+
+/*make the toggler the same size as the burger menu*/
+.menu-wrap .toggler {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 106px;
+  z-index: 20;
+  cursor: pointer;
+  opacity: 0;
+}
+
+/*selve burgermenu er en checkbox*/
+.burger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 106px;
+  background: var(--bg-color);
+  box-shadow: 10px 10px 27px #d4d6d8, -10px -10px 27px #ffffff;
+  border: none;
+  cursor: pointer;
+  z-index: 19;
+}
+
+/*Midten linje i burger*/
+.burger > div {
+  position: relative;
+  width: 60%;
+  height: 12px;
+  border-radius: 106px;
+  background-color: var(--primary-color);
+  transition: all 0.4s ease;
+}
+
+/*oppe og nede linje i burger*/
+.burger > div::before,
+.burger > div::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  z-index: 19;
+  width: 100%;
+  height: 12px;
+  border-radius: 106px;
+  background-color: var(--primary-color);
+}
+
+/*dytt nede linje lengre ned*/
+.burger > div::after {
+  top: 20px;
+}
+
+/*Toggler animate*/
+.menu-wrap .toggler:checked + .burger > div {
+  transform: rotate(135deg);
+}
+
+/*turn lines in to X*/
+.menu-wrap .toggler:checked + .burger > div::before,
+.menu-wrap .toggler:checked + .burger > div::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/*rotate X when hover*/
+.menu-wrap .toggler:checked:hover + .burger > div {
+  transform: rotate(225deg);
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 18;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.menu > div {
+  background: var(--overlay-color);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+}
+
+/*style menu text*/
+.menu li {
+  list-style: none;
+  color: var(--htext-color);
+  font-family: "Amatic SC", cursive;
+  font-size: 80px;
+  padding: 1.5rem;
+  letter-spacing: 20px;
+  font-weight: 700;
+}
+
+.menu ul {
+  text-align: center;
+}
+
+.menu a {
+  color: inherit;
+  text-decoration: none;
+}

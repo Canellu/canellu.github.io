@@ -4640,16 +4640,17 @@ if (window.jQuery && window.fullpage) {
 const fp = new fullpage("#fullpage", {
   licenseKey: "20ppTqD#p6",
   autoScrolling: true,
+  scrollingSpeed: 800,
+
   //Anchors are used to navigate
   anchors: [
     "Homepage",
     "Storytell",
-    "Statistics",
+    "StatisticsLuna",
+    "StatisticsLudo",
     "TimelineGallery",
     "AboutUs",
   ],
-  //When leaving page Timeline with direction down, add pawbuttonEnd
-  //When leaving page AboutUs with direction up, remove pawbuttonEnd
   onLeave: function (origin, destination, direction) {
     if (origin.anchor == "TimelineGallery" && direction == "down") {
       pawButton.classList.add("pawButtonEnd");
@@ -4657,59 +4658,61 @@ const fp = new fullpage("#fullpage", {
     if (origin.anchor == "AboutUs" && direction == "up") {
       pawButton.classList.remove("pawButtonEnd");
     }
+
+    // Kom til siden, add animation class
+    switch (destination.anchor) {
+      case "Storytell":
+        storyCover.classList.add("coverAnim");
+        storyBildeBg.classList.add("bildeBgAnim");
+        break;
+      case "StatisticsLuna":
+        // code block
+        break;
+      case "StatisticsLudo":
+        // code block
+        break;
+      case "TimelineGallery":
+        // code block
+        break;
+      case "AboutUs":
+        // code block
+        break;
+    }
+
+    // Gå vekk fra siden, remove animation class
+    switch (origin.anchor) {
+      case "Storytell":
+        setTimeout(() => {
+          storyCover.classList.remove("coverAnim");
+          storyBildeBg.classList.remove("bildeBgAnim");
+        }, 500);
+        break;
+      case "StatisticsLuna":
+        // code block
+        break;
+      case "StatisticsLudo":
+        // code block
+        break;
+      case "TimelineGallery":
+        // code block
+        break;
+      case "AboutUs":
+        // code block
+        break;
+    }
   },
-});
-
-// functions for toggling scrolling when nav-menu is open/closed
-var allowScroll = false;
-function disableScroll() {
-  allowScroll = !allowScroll;
-  fp.setAllowScrolling(false);
-  fp.setKeyboardScrolling(false);
-}
-function enableScroll() {
-  allowScroll = !allowScroll;
-  fp.setAllowScrolling(true);
-  fp.setKeyboardScrolling(true);
-}
-
-//Enable/disable scroll when burger clicked
-const burgeren = document.querySelector(".burger");
-window.addEventListener("click", (event) => {
-  if (event.target == burger || event.target.parentNode == burger) {
-    allowScroll ? enableScroll() : disableScroll();
-  }
 });
 
 /*Links functionality
   Move to page when clicking navigation links
   Also add or remove pawButtonEnd on certain pages */
-document.getElementById("goToHome").addEventListener("click", (e) => {
-  fullpage_api.moveTo("Homepage", 1);
+document.getElementById("toHome").addEventListener("click", (e) => {
+  // fullpage_api.moveTo("Homepage", 1);
   pawButton.classList.remove("pawButtonEnd");
-  enableScroll();
 });
-document.getElementById("goToHomePage").addEventListener("click", () => {
-  fullpage_api.moveTo("Homepage", 1);
-  pawButton.classList.remove("pawButtonEnd");
-  enableScroll();
-});
-document.getElementById("goToStoryPage").addEventListener("click", () => {
-  fullpage_api.moveTo("Storytell", 1);
-  enableScroll();
-});
-document.getElementById("goToStatsPage").addEventListener("click", () => {
-  fullpage_api.moveTo("Statistics", 1);
-  enableScroll();
-});
-document.getElementById("goToTimelinePage").addEventListener("click", () => {
-  fullpage_api.moveTo("TimelineGallery", 1);
-  enableScroll();
-});
-document.getElementById("goToAboutPage").addEventListener("click", () => {
-  fullpage_api.moveTo("AboutUs", 1);
+document.getElementById("toAbout").addEventListener("click", () => {
+  // fullpage_api.moveTo("AboutUs", 1);
   pawButton.classList.add("pawButtonEnd");
-  enableScroll();
 });
 
 /* Pawbutton functionality */
@@ -4717,11 +4720,6 @@ const pawButton = document.querySelector(".pawButton");
 pawButton.addEventListener("click", () => {
   const url = window.location.href.split("#")[1];
 
-  //Normal if
-  //Add or remove pawButtonEnd on certain pages
-  if (url == "TimelineGallery" || url == "AboutUs") {
-    pawButton.classList.toggle("pawButtonEnd");
-  }
   //Ternary operator ("Single line if")
   //Syntax: condition ? true : false
   url == "AboutUs"

@@ -1,24 +1,288 @@
 #home {
+  position: relative;
   display: grid;
-  grid-template-areas:
-    "luna ludo"
-    "title title";
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 40px 1fr; /*3格4线*/
+  grid-template-rows: 60% auto;
+  width: 100%;
+  height: 70%;
+  /* border: 12px solid rgb(156, 8, 8); */
 }
 
-.lunaBox {
-  grid-area: luna;
-  border: 2px solid coral;
-  animation: moveDown 1s ease-in-out, fadeIn 1s;
-}
-.ludoBox {
-  grid-area: ludo;
-  border: 2px solid coral;
-  animation: moveDown 1s ease-in-out;
+.lunaFigur {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-right: 50px;
 }
 
-.homeTitle {
-  text-align: center;
-  grid-area: title;
-  border: 2px solid coral;
+.ludoFigur {
+  grid-column: 3;
+  grid-row: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-left: 50px;
+}
+
+.Ludo {
+  max-width: 370px;
+  width: 80%;
+  animation: moveDown 1.5s cubic-bezier(0.13, 0.05, 0.55, 1.36);
+}
+
+.Luna {
+  max-width: 250px;
+  width: 55%;
+  animation: moveDown 1.5s cubic-bezier(0.13, 0.05, 0.55, 1.36);
+}
+
+.lunaTittel {
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 30px;
+  padding-bottom: 40px;
+  animation-name: fadeIn;
+  animation-duration: 4s;
+  animation-timing-function: ease;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.og {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  animation-name: fadeIn;
+  animation-duration: 4s;
+  animation-timing-function: ease;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.og h1 {
+  font-size: 4rem;
+}
+
+.ludoTittel {
+  grid-column: 3;
+  grid-row: 2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 60px;
+  padding-bottom: 40px;
+  animation-name: fadeIn;
+  animation-duration: 4s;
+  animation-timing-function: ease;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.ludoTittel h1 {
+  letter-spacing: 50px;
+}
+
+.lunaTittel h1 {
+  letter-spacing: 50px;
+}
+
+.ludoTittel h2 {
+  font-size: 9rem;
+  font-weight: bold;
+  padding-bottom: 30px;
+}
+
+.lunaTittel h2 {
+  padding-bottom: 30px;
+  font-size: 9rem;
+  font-weight: bold;
+  letter-spacing: 50px;
+}
+
+.traad {
+  grid-column: 1 / span 3;
+  grid-row: 1;
+  z-index: -5;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 30px;
+}
+
+.flyG {
+  position: absolute;
+  right: 100px;
+  top: -35px;
+  offset-path: path(
+    "M540.543 0.584717C271.227 95.913 405.767 336.601 272.589 398.931C139.41 461.261 129.827 343.223 0.986816 449.482"
+  );
+  offset-distance: 0%;
+  animation: fly 4s 8s forwards, fadeOut 0.5s 11s ease forwards;
+  transform: rotate(150deg);
+}
+
+.flyR {
+  position: absolute;
+  right: 40px;
+  top: -60px;
+  transform: rotate(70deg);
+  offset-path: path(
+    "M0.972168 581.453C0.972168 581.453 49.1852 421.351 131.264 437.859C213.343 454.366 253.476 487.81 333.741 469.415C414.007 451.021 664.671 1.15033 664.671 1.15033"
+  );
+  offset-distance: 0%;
+  opacity: 0;
+  animation: fadeIn 0.5s 4.1s ease forwards, fly 4.5s 4.2s forwards,
+    fadeOut 0.5s 7s ease-out forwards;
+}
+
+@keyframes fly {
+  from {
+    offset-distance: 0%;
+  }
+  to {
+    offset-distance: 100%;
+  }
+}
+
+/*laptop*/
+@media screen and (max-width: 1200px) {
+  .ludoTittel h1 {
+    font-size: 5rem;
+  }
+
+  .lunaTittel h1 {
+    font-size: 5rem;
+  }
+
+  .og h1 {
+    font-size: 3rem;
+  }
+
+  .ludoTittel h2 {
+    font-size: 7rem;
+  }
+
+  .lunaTittel h2 {
+    font-size: 7rem;
+  }
+
+  .traad svg {
+    width: 990px;
+  }
+}
+
+/*pad*/
+@media screen and (max-width: 768px) {
+  .ludoTittel h1 {
+    font-size: 4rem;
+    letter-spacing: 15px;
+  }
+
+  .lunaTittel h1 {
+    font-size: 4rem;
+    letter-spacing: 15px;
+  }
+
+  .og h1 {
+    font-size: 2rem;
+  }
+
+  .ludoTittel h2 {
+    font-size: 6rem;
+  }
+
+  .lunaTittel h2 {
+    font-size: 6rem;
+    letter-spacing: 15px;
+  }
+
+  .traad svg {
+    width: 700px;
+  }
+
+  .flyR {
+    right: -20px;
+    top: -50px;
+  }
+
+  svg {
+    width: 55px;
+  }
+
+  .Luna {
+    min-width: 140px;
+  }
+
+  .Ludo {
+    overflow: hidden;
+    min-width: 200px;
+  }
+}
+
+/*phone*/
+@media screen and (max-width: 480px) {
+  #home {
+    grid-template-columns: 1fr 20px 1fr;
+  }
+
+  .lunaFigur {
+  }
+
+  .ludoFigur {
+    padding-left: 0px;
+  }
+
+  .Ludo {
+    min-width: 165px;
+  }
+
+  .Luna {
+    min-width: 120px;
+  }
+
+  .traad {
+    visibility: hidden;
+  }
+
+  .flyR {
+    visibility: hidden;
+  }
+
+  .ludoTittel {
+    padding-left: 30px;
+  }
+
+  .ludoTittel h1 {
+    font-size: 4rem;
+    letter-spacing: 5px;
+  }
+
+  .lunaTittel h1 {
+    font-size: 4rem;
+    letter-spacing: 5px;
+  }
+
+  .og h1 {
+    font-size: 2rem;
+  }
+
+  .ludoTittel h2 {
+    font-size: 6rem;
+  }
+
+  .lunaTittel h2 {
+    font-size: 6rem;
+    letter-spacing: 5px;
+  }
 }

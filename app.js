@@ -1,64 +1,110 @@
-const burger = document.querySelector(".burger");
-const nav = document.querySelector("nav");
-const body = document.querySelector("body");
+var checkbox = document.querySelector('input[type="checkbox"]');
+var menu = document.querySelector(".menu");
+var vector = document.querySelector(".bgFigur");
+var melding = document.querySelector(".tekstBoks");
+var sendKnapp = document.querySelector(".btnSend");
+var links = document.querySelectorAll(".menu li");
+var form = document.querySelector("#toFirestoreForm");
+var storyCover = document.querySelector(".cover");
+var storyBildeBg = document.querySelector(".bildeBg");
+var navnboks = document.querySelector(".navnBoks");
 
-function toggleNav() {
-  window.addEventListener("click", (event) => {
-    // Do nothing if nav or ul is clicked
-    if (event.target == nav || event.target.parentNode == nav) {
-      return;
-    }
-
-    if (event.target == burger || event.target.parentNode == burger) {
-      burger.classList.toggle("burger-active"); // Veksler mellom class burger-active og burger ved hver click
-      nav.classList.toggle("nav-active");
-      body.classList.toggle("body-active");
-    } else {
-      burger.classList.remove("burger-active");
-      nav.classList.remove("nav-active");
-    }
+links.forEach((e) => {
+  e.addEventListener("click", () => {
+    menu.style.visibility = "hidden";
+    menu.style.pointerEvents = "none";
+    checkbox.checked = false;
   });
-}
+});
+
+//sjekker om checkbox (burger) er trykka og endrer opacity til menu
+checkbox.addEventListener("click", () => {
+  if (!checkbox.checked) {
+    menu.style.pointerEvents = "none";
+    menu.style.visibility = "hidden";
+  } else {
+    menu.style.pointerEvents = "auto";
+    menu.style.visibility = "visible";
+  }
+});
 
 window.addEventListener("mousemove", parralaxContainer);
 
-function parallax(e) {
-  document.querySelectorAll(".poly").forEach(function (move) {
-    var moving_value = move.getAttribute("data-value");
-    var x = ((e.clientX - window.innerWidth / 2) * moving_value) / 100;
-    var y = ((e.clientY - window.innerHeight / 2) * moving_value) / 100;
-    move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
-  });
-}
-
+//funksjon til aa bevege bgvectors
 function parralaxContainer(e) {
-  polyContainer = document.querySelector(".polygons");
-  moving_value = -10;
+  moving_value = -5;
   var x = ((e.clientX - window.innerWidth / 2) * moving_value) / 100;
   var y = ((e.clientY - window.innerHeight / 2) * moving_value) / 100;
-  polyContainer.style.transform =
-    "translateX(" + x + "px) translateY(" + y + "px)";
+  vector.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
 }
 
-toggleNav();
+//kanpp funksjon on click til database
+sendKnapp.addEventListener("click", sendToFirestore);
 
-(function () {
-  document.onreadystatechange = () => {
-    if (document.readyState === "complete") {
-      /**
-       * Setup your Lazy Line element.
-       * see README file for more settings
-       */
+//funksjon til å sende til firestore
+function sendToFirestore() {
+  console.log("KJORER KNAPP FUNC");
+  if (melding.value == "") {
+    // alert("You haven't written anything to Luna&Ludo :(");
+  } else {
+    console.log("ikke tom");
+    addMessages();
+    form.reset();
+  }
 
-      let el = document.querySelector("#line");
-      let myAnimation = new LazyLinePainter(el, {
-        ease: "easeInOutQuad",
-        strokeWidth: 1,
-        strokeOpacity: 1,
-        strokeColor: "#222F3D",
-        reverse: true,
-      });
-      myAnimation.paint();
-    }
-  };
-})();
+  //Animation on click
+  sendKnapp.classList.add("flyAnimation");
+  setTimeout(() => {
+    sendKnapp.classList.remove("flyAnimation");
+  }, 5000);
+}
+
+// Click&Drag logic
+const slider = document.querySelector(".glassWrapper");
+let isDown = false;
+let startX;
+let scrollTop;
+let scrollSpeed = 1;
+
+slider.addEventListener("mousedown", (e) => {
+  isDown = true;
+  startX = e.pageX - slider.offsetLeft; // Position of click
+  scrollTop = slider.scrollTop; // Position of scrollbar
+  slider.classList.add("grabbing");
+});
+
+slider.addEventListener("mouseleave", (e) => {
+  isDown = false;
+  slider.classList.remove("grabbing");
+});
+
+slider.addEventListener("mouseup", (e) => {
+  isDown = false;
+  slider.classList.remove("grabbing");
+});
+
+slider.addEventListener("mousemove", (e) => {
+  if (!isDown) return; // stop function from running when not holding down
+  e.preventDefault(); // Prevent unwanted behaviour like marking text etc.
+  const x = e.pageX - slider.offsetLeft; // Current position of mouse
+  const walk = (x - startX) * scrollSpeed; // calculate pixels moved from initial click
+  slider.scrollTop = scrollTop - walk;
+});
+
+// Start gsap animation when its observed that bio is viewable
+const bioLudo = document.querySelector("#bioLudo");
+var observer = new IntersectionObserver((entries) => {
+  // isIntersecting is true when element and viewport are overlapping
+  // isIntersecting is false when element and viewport don't overlap
+
+  if (entries[0].isIntersecting === true) {
+    gsap.from(".sun", {
+      y: 200,
+      duration: 1.2,
+      delay: 0.4,
+      ease: "elastic",
+    });
+  }
+});
+observer.observe(bioLudo);
+//TEST

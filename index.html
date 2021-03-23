@@ -4,167 +4,376 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="css/style.css" />
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
 
-    <link rel="icon" href="../assets/icons/browser_icon.png" />
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+
+    <!-- Custom css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
 
     <title>Luna & Ludo</title>
   </head>
+
   <body>
+    <!-- Top bar -->
     <header>
-      <div id="goToHome">
-        <img class="logo" src="./assets/svg/PawHover.svg" alt="Paw" />
-      </div>
-      <div class="burger">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
+      <div class="ikon"></div>
+      <div class="menu-wrap">
+        <input type="checkbox" class="toggler" />
+        <div class="burger"><div></div></div>
       </div>
     </header>
-    <nav>
-      <ul class="nav-links">
-        <li id="goToHomePage">Home</li>
-        <li id="goToStoryPage">Story</li>
-        <li id="goToStatsPage">Stats</li>
-        <li id="goToTimelinePage">Timeline</li>
-        <li id="goToAboutPage">About</li>
-      </ul>
-    </nav>
 
-    <div class="pawButton"></div>
-    <div class="polygons">
-      <img
-        src="assets/svg/GreenishLeaf.svg"
-        class="poly"
-        data-value="-5"
-        alt=""
-      />
-      <img
-        src="assets/svg/PurpleCircle.svg"
-        class="poly"
-        data-value="12"
-        alt=""
-      />
-      <img
-        src="assets/svg/YellowSquare.svg"
-        class="poly"
-        data-value="3"
-        alt=""
-      />
-      <img
-        src="assets/svg/YellowTriangle.svg"
-        class="poly"
-        data-value="-8"
-        alt=""
-      />
-      <img
-        src="assets/svg/PinkHexagon.svg"
-        class="poly"
-        data-value="8"
-        alt=""
-      />
-      <img
-        src="assets/svg/TealPentagon.svg"
-        class="poly"
-        data-value="7"
-        alt=""
-      />
-      <img
-        src="assets/svg/TealTriangle.svg"
-        class="poly"
-        data-value="-5"
-        alt=""
-      />
+    <!-- Navigation Modal-->
+    <div class="menu">
+      <div>
+        <ul>
+          <li><a href="#Homepage" id="toHome">Home</a></li>
+          <li><a href="#Storytell" id="toStory">Story</a></li>
+          <li><a href="#StatisticsLuna" id="toLuna">Bio</a></li>
+          <li><a href="#TimelineGallery" id="toLudo">Timeline</a></li>
+          <li><a href="#AboutUs" id="toAbout">About</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Background elements hei -->
+    <div class="bgFigur">
+      <div class="figurV">
+        <img class="V1" src="assets/svg/v1.svg" alt="bakgrunnsfigurer" />
+        <img class="V2" src="assets/svg/v2.svg" alt="bakgrunnsfigurer" />
+        <img class="V3" src="assets/svg/v3.svg" alt="bakgrunnsfigurer" />
+        <img class="V4" src="assets/svg/v4.svg" alt="bakgrunnsfigurer" />
+      </div>
+      <div class="figurH">
+        <img class="H1" src="assets/svg/h2.svg" alt="bakgrunnsfigurer" />
+        <img class="H2" src="assets/svg/h1.svg" alt="bakgrunnsfigurer" />
+      </div>
     </div>
 
     <div id="fullpage">
+      <!-- Fullpage start -->
+
+      <!----------------------------------  Home  ----------------------------------->
+
       <section class="section">
-        <div class="container" id="home">
-          <img class="plane" src="assets/svg/plane2.svg" alt="pinkPlane" />
+        <div class="container">
+          <div class="sideInfo">
+            <div class="strek"></div>
+            <h3>Home</h3>
+          </div>
 
           <svg
-            id="line"
-            width="1395"
-            height="255"
-            viewBox="0 0 1395 255"
+            class="flyR"
+            width="110"
+            height="92"
+            viewBox="0 0 110 92"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M1.23047 198.082C298.471 -252.915 347.393 235.164 472.541 86.1238C597.69 -62.9166 1188.7 357.189 1158.58 213.547C1129 72.4713 1273.49 369.414 1394.09 198.082"
-              stroke="#FCB1B1"
-              stroke-width="2"
-              pathLength="1"
+              d="M9.00964 48.5411L91.6998 1.4449L74.0765 76.342L59.0597 63.3409L47.6504 76.7404L43.5814 51.6648L9.00964 48.5411Z"
+              fill="#FCB1B1"
+            />
+            <path
+              d="M91.6998 1.4449L9.00964 48.5411L43.5814 51.6648M91.6998 1.4449L74.0765 76.342L59.0597 63.3409M91.6998 1.4449L43.5814 51.6648M43.5814 51.6648L47.6504 76.7404L59.0597 63.3409M43.5814 51.6648L59.0597 63.3409"
+              stroke="#E4E3E3"
             />
           </svg>
 
-          <div class="ludoBox">
-            <img
-              class="ludoCoverImg"
-              src="assets/svg/ludoCover.svg"
-              alt="LudoCover"
+          <svg
+            class="flyG"
+            width="85"
+            height="66"
+            viewBox="0 0 85 66"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M81.2138 28.0319L5.49129 1.4854L31.4499 60.9445L41.9379 47.8864L53.4308 57.2739L53.0094 35.8575L81.2138 28.0319Z"
+              fill="#96F7D2"
             />
-          </div>
-
-          <div class="lunaBox">
-            <img
-              class="lunaCoverImg"
-              src="assets/svg/lunaCover.svg"
-              alt="LunaCover"
+            <path
+              d="M5.49129 1.4854L81.2138 28.0319L53.0094 35.8575M5.49129 1.4854L31.4499 60.9445L41.9379 47.8864M5.49129 1.4854L53.0094 35.8575M53.0094 35.8575L53.4308 57.2739L41.9379 47.8864M53.0094 35.8575L41.9379 47.8864"
+              stroke="#E4E3E3"
             />
+          </svg>
+
+          <div id="home">
+            <div class="lunaFigur">
+              <img class="Luna" src="assets/svg/luna.svg" alt="lunaFigur" />
+            </div>
+            <div class="ludoFigur">
+              <img class="Ludo" src="assets/svg/ludo.svg" alt="ludoFigur" />
+            </div>
+            <div class="lunaTittel">
+              <h2>L</h2>
+              <h1>una</h1>
+            </div>
+            <div class="og"><h1>&</h1></div>
+            <div class="ludoTittel">
+              <h1>Lud</h1>
+              <h2>O</h2>
+            </div>
+            <div class="traad">
+              <svg
+                id="line"
+                width="1360"
+                height="239"
+                viewBox="0 0 1360 239"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.97876 130.582C121.569 -197.041 390.88 217.796 471.309 89.0927C551.738 -39.6109 1143.71 369.512 1076.66 192.759C1033.11 77.9409 1249.9 345.281 1358.56 172.475"
+                  stroke="#FCB1B1"
+                  stroke-width="2"
+                  pathLength="1"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!----------------------------------  Story  ----------------------------------->
+
+      <section class="section">
+        <div class="container">
+          <div class="sideInfo">
+            <div class="strek"></div>
+            <h3>Story</h3>
+          </div>
+          <div id="story">
+            <div class="storyBilde">
+              <img class="cover" />
+            </div>
+            <div class="storyTittel">
+              <h2><span class="textColor">HELLO!</span></h2>
+              <h2><span class="textColor">WE ARE LUNA AND LUDO.</span></h2>
+              <h2><span class="textColor">NICE TO MEET YOU.</span></h2>
+            </div>
+            <div class="stories">
+              <p>We are 24/7 professional catbeings from Norway.</p>
+              <p>We moved to Jenny&Anton in 2019 &#x1F60E;.</p>
+              <!-- <p>Now we are good buddies</p> -->
+              <!-- <p>We are from different parents, obviously.</p>
+              <p>But we are "the siblings" in the house.</p>  -->
+
+              <p>We love cuddling, sleeping and playing.</p>
+              <p>Specialy sleep all day and party all night long~</p>
+
+              <p>This site is about us, glad you stopped by.</p>
+              <p>Let's become good buddies! &#x1F929;</p>
+            </div>
+            <div class="bildeBg"></div>
+          </div>
+        </div>
+      </section>
+
+      <!----------------------------------  Ludo Biography  ----------------------------------->
+
+      <section class="section">
+        <div class="container">
+          <div class="sideInfo">
+            <div class="strek"></div>
+            <h3>Bio</h3>
           </div>
 
-          <div class="homeTitle">
-            <h1>Luna & Ludo</h1>
+          <div id="bioLudo">
+            <div class="ludoHeader">
+              <img class="ludoImgBg" src="assets/svg/ludoImgBg.svg" alt="" />
+              <img class="ludoImg" />
+              <h1>Ludo</h1>
+            </div>
+            <div class="ludoStats">
+              <table>
+                <tr>
+                  <td><p>Name:</p></td>
+                  <td><p>Ludo</p></td>
+                </tr>
+                <tr>
+                  <td><p>Age:</p></td>
+                  <td><p>2 years</p></td>
+                </tr>
+                <tr>
+                  <td><p>Weight:</p></td>
+                  <td><p>Confidential</p></td>
+                </tr>
+                <tr>
+                  <td><p>Race:</p></td>
+                  <td><p>Neva Masquerade</p></td>
+                </tr>
+                <tr>
+                  <td><p>Likes:</p></td>
+                  <td><p>Socks, dental floss, plastic bags!</p></td>
+                </tr>
+                <tr>
+                  <td><p>Dislikes:</p></td>
+                  <td><p>When my owners are asleep 😤</p></td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="mountainSun">
+              <img class="sun" src="assets/svg/sun.svg" alt="" />
+              <img class="mountain" src="assets/svg/mountain.svg" alt="" />
+            </div>
           </div>
         </div>
       </section>
 
+      <!----------------------------------  Luna Biography  ----------------------------------->
+
       <section class="section">
-        <div class="container" id="story">
-          <div class="grid-container">
-            <div class="item1">
-              <img
-                class="LunadoCover"
-                src="assets/images/LunaLudo/LunaLudo.jpg"
-                alt="forsidebildet til luna og ludo"
-              />
-            </div>
-            <div class="item2">
-              <h1>
-                Hello! This is Lorem ipsum dolor sit amet, consectetur
-                adipisicing elit.
-              </h1>
-            </div>
-            <div class="item3">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-                necessitatibus eligendi ex. Consequuntur deserunt nesciunt
-                voluptatibus accusantium tenetur tempore, est, ut rerum quaerat
-                unde autem praesentium eveniet repellat repudiandae obcaecati.
-              </p>
+        <div class="container">
+          <div class="sideInfo">
+            <div class="strek"></div>
+            <h3>Bio</h3>
+          </div>
+          <div id="bioLuna">
+            <div class="nightShadow"></div>
+            <div class="lunaPic"></div>
+            <div class="bgVector"></div>
+            <div class="info">
+              <p>Lorem ipsum dolor sit</p>
+              <p>Lorem ipsum dolor sit</p>
+              <p>Lorem ipsum dolor sit</p>
+              <p>Lorem ipsum dolor sit</p>
+              <p>Lorem ipsum dolor sit</p>
+              <p>Lorem ipsum dolor sit</p>
+              <p>Lorem ipsum dolor sit</p>
             </div>
           </div>
         </div>
       </section>
-      <section class="section redbg">
-        <div class="container" id="stats">
-          <h1>STATS</h1>
+
+      <!----------------------------------  Timeline  ----------------------------------->
+
+      <section class="section">
+        <div class="container">
+          <div class="sideInfo">
+            <div class="strek"></div>
+            <h3>Timeline</h3>
+          </div>
+
+          <div id="timeline">
+            <div class="glassWrapper">
+              <div class="timeTraad">
+                <img src="assets/svg/timeline.svg" alt="" />
+              </div>
+              <div class="slower">
+                <img src="assets/images/LunaLudo/Luna (6).jpg" alt="" />
+              </div>
+              <div class="t1"><h2>cicicicicicici</h2></div>
+              <div class="faster">
+                <img src="assets/images/LunaLudo/Luna (6).jpg" alt="" />
+              </div>
+              <div class="t2"><h2>boboobobobobobo</h2></div>
+
+              <div class="slower1">
+                <img src="assets/images/LunaLudo/Luna (6).jpg" alt="" />
+              </div>
+
+              <div class="faster1">
+                <img src="assets/images/LunaLudo/Luna (6).jpg" alt="" />
+              </div>
+              <div class="t3"><h2>kkkkkkkkkkkkk</h2></div>
+              <div class="slower2">
+                <img src="assets/images/LunaLudo/Luna (6).jpg" alt="" />
+              </div>
+              <div class="t4"><h2>pppppppppppp</h2></div>
+              <div class="faster2">
+                <img src="assets/images/LunaLudo/Luna (6).jpg" alt="" />
+              </div>
+
+              <div class="slower3">
+                <img src="assets/images/LunaLudo/Luna (6).jpg" alt="" />
+              </div>
+              <div class="t5"><h2>cicicicicicici</h2></div>
+              <div class="faster3">
+                <img src="assets/images/LunaLudo/Luna (6).jpg" alt="" />
+              </div>
+              <div class="t6"><h2>ddddddddd</h2></div>
+              <div class="slower4">
+                <img src="assets/images/LunaLudo/Luna (6).jpg" alt="" />
+              </div>
+              <div class="t7"><h2>UUUUUUUUUUUUU</h2></div>
+            </div>
+          </div>
         </div>
       </section>
+
+      <!----------------------------------  About  ----------------------------------->
+
       <section class="section">
-        <div class="container" id="timeline">
-          <h1>TIMELINE</h1>
-        </div>
-      </section>
-      <section class="section">
-        <div class="container" id="about">
-          <h1>ABOUT</h1>
+        <div class="container">
+          <div class="sideInfo">
+            <div class="strek"></div>
+            <h3>About</h3>
+          </div>
+          <div id="about">
+            <h3>GREET US!</h3>
+            <div class="mailBox">
+              <img src="assets/svg/mailBG.svg" alt="" />
+              <form id="toFirestoreForm">
+                <input class="navnBoks" type="text" placeholder="Your Name" />
+                <span class="focus-border1"> </span>
+                <input
+                  class="emailBoks"
+                  type="email"
+                  placeholder="Your Email"
+                />
+                <span class="focus-border2"></span>
+                <textarea class="tekstBoks" placeholder="Your Message">
+                </textarea>
+                <span class="focus-border3"></span>
+              </form>
+
+              <div class="pathTest">
+                <svg
+                  width="1339"
+                  height="770"
+                  viewBox="0 0 1339 770"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1131.86 625.89C1143.89 609.353 1146.5 587.98 1159.62 571.94C1166.66 563.34 1172.79 556.053 1182.18 549.683C1190.09 544.315 1198.47 540.331 1206.98 536.075C1223.33 527.901 1242.48 523.684 1257.6 513.212C1273.19 502.424 1290.46 491.697 1300.06 474.625C1305.97 464.126 1313.57 455.128 1318.57 444.021C1321.03 438.552 1323.2 432.41 1324.8 426.662C1326.82 419.371 1331.01 413.114 1332.42 405.494C1335.4 389.386 1337.62 373.926 1337.62 357.531C1337.62 341.185 1334.32 327.755 1330.85 312.109C1328.07 299.633 1320.42 283.24 1312.58 273.159C1308.06 267.348 1304.29 261.171 1299.52 255.498C1293.69 248.573 1285.68 242.875 1278.59 237.233C1247.63 212.61 1208.58 195.923 1170.21 187.395C1138.45 180.338 1108.28 168.016 1079.06 153.949C1055.58 142.646 1030.26 133.453 1011.56 114.757C1005.25 108.444 998.712 103.333 993.598 95.9466C987.959 87.8013 980.463 79.3036 973.457 72.2981C944.552 43.393 901.482 34.489 865.074 19.4973C842.844 10.344 816.712 7.39569 793.039 4.01385C774.545 1.37176 756.374 0.989746 737.698 0.989746C714.831 0.989746 692.097 5.62302 669.414 6.43313C658.768 6.81334 646.6 11.0587 636.33 14.0539C622.82 17.9945 607.579 20.2217 594.719 26.0293C578.956 33.1479 565.011 40.7783 551.595 51.9156C535.729 65.0878 525.089 82.8946 511.858 98.4263C500.614 111.626 491.282 126.955 481.073 140.945C470.595 155.304 461.194 170.216 450.409 184.371C430.344 210.707 402.955 230.704 374.383 247.031C330.422 272.151 279.276 288.497 229.105 294.691C202.015 298.035 173.868 296.021 146.607 296.021C117.526 296.021 89.3343 297.61 60.6017 302.311C45.009 304.863 29.4628 310.83 18.1433 322.149C3.72219 336.571 0.724434 352.658 0.724434 372.471C0.724434 390.396 3.68575 406.065 13.7886 421.219C24.7921 437.724 39.4558 453.612 56.7913 463.677C80.4011 477.386 104.482 489.187 130.761 497.185C158.536 505.638 187.404 512.234 215.738 518.595C266.704 530.037 321.31 534.155 368.697 557.848C386.54 566.769 406.499 575.9 420.954 589.964C426.637 595.493 433.201 600.034 438.856 605.689C443.469 610.302 447.214 615.681 451.558 620.507C463.753 634.057 474.782 648.452 486.698 662.301C499.483 677.159 508.877 693.95 520.265 709.719C530.778 724.275 542.34 739.333 558.671 747.762C568.776 752.977 579.735 755.362 590.787 757.62C611.845 761.922 632.84 764.994 654.294 766.572C688.071 769.055 720.851 770.714 754.633 767.418C780.169 764.927 808.209 762.077 832.716 754.112C843.908 750.475 855.457 748.107 866.283 743.467C878.632 738.175 891.632 733.165 904.326 728.77C920.967 723.01 938.207 717.966 953.922 709.96C970.696 701.415 986.301 693.926 1004.42 688.489C1016.67 684.815 1028.14 679.137 1040.41 675.728C1061.38 669.904 1082.63 666.775 1103.31 659.881C1111.17 657.264 1119.45 656.005 1127.02 652.563C1131.61 650.477 1141.91 647.749 1144.68 643.309C1146.36 640.62 1151.56 637.786 1154.18 635.688C1158.56 632.184 1160.17 628.145 1160.17 622.624"
+                    stroke="black"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+
+              <button class="btnSend"></button>
+            </div>
+            <h3>LET'S BE FRIENDS</h3>
+          </div>
         </div>
       </section>
     </div>
+    <!-- Fullpage End -->
 
-    <script src="app.js"></script>
+    <!-- Navigation button -->
+    <footer>
+      <button class="pawButton"></button>
+    </footer>
+
+    <!-- Scripts -->
     <script src="fullpage.js"></script>
+    <script src="database.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
