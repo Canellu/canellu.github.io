@@ -4,7 +4,7 @@
   grid-gap: 20px;
   overflow: hidden;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /*3格4线*/
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr 1fr;
 }
 
@@ -47,7 +47,7 @@
   transform: scale(1.1);
 }
 
-tr td:first-child {
+#bioLudo tr td:first-child {
   margin-right: 20px;
   margin-top: 8px;
   padding: 4px;
@@ -72,4 +72,7 @@ tr td:first-child {
   bottom: 310px;
   right: 349px;
   transform: scale(1.2);
+}
+#bioLudo span {
+  color: rgb(230, 28, 79);
 }

@@ -7,7 +7,6 @@
   cursor: pointer;
   height: 100px;
   width: 100px;
-  background: var(--bg-color);
   box-shadow: -10px -10px 20px #cdcfd1, 10px 10px 20px #ffffff;
 
   border-radius: 50%;
@@ -25,13 +24,9 @@
   box-shadow: 10px 10px 20px #cdcfd1, -10px -10px 20px #ffffff;
 }
 
-.pawButton:active {
-  /* box-shadow: inset 10px 10px 20px #cdcfd1, inset -10px -10px 20px #ffffff; */
-}
-
-.pawButton:hover {
+/* .pawButton:hover {
   animation: cycleColors 1s infinite;
-}
+} */
 
 @keyframes cycleColors {
   0% {
@@ -63,5 +58,43 @@
     background-size: 55px;
     background-position: center center;
     background-color: var(--bg-color);
+  }
+}
+
+@keyframes cycleColorsDark {
+  0% {
+    background: url("../assets/svg/pinkPaw1.svg") no-repeat;
+    background-size: 55px;
+    background-position: center center;
+    background-color: #5f5f5f;
+    box-shadow: 10px 10px 20px #515151, -10px -10px 20px #6d6d6d;
+  }
+  25% {
+    background: url("../assets/svg/pinkPaw2.svg") no-repeat;
+    background-size: 55px;
+    background-position: center center;
+    background-color: #5f5f5f;
+    box-shadow: 10px 10px 20px #515151, -10px -10px 20px #6d6d6d;
+  }
+  50% {
+    background: url("../assets/svg/pinkPaw3.svg") no-repeat;
+    background-size: 55px;
+    background-position: center center;
+    background-color: #5f5f5f;
+    box-shadow: 10px 10px 20px #515151, -10px -10px 20px #6d6d6d;
+  }
+  75% {
+    background: url("../assets/svg/pinkPaw4.svg") no-repeat;
+    background-size: 55px;
+    background-position: center center;
+    background-color: #5f5f5f;
+    box-shadow: 10px 10px 20px #515151, -10px -10px 20px #6d6d6d;
+  }
+  100% {
+    background: url("../assets/svg/pinkPaw5.svg") no-repeat;
+    background-size: 55px;
+    background-position: center center;
+    background-color: #5f5f5f;
+    box-shadow: 10px 10px 20px #515151, -10px -10px 20px #6d6d6d;
   }
 }

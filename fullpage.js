@@ -4646,8 +4646,8 @@ const fp = new fullpage("#fullpage", {
   anchors: [
     "Homepage",
     "Storytell",
-    "StatisticsLuna",
     "StatisticsLudo",
+    "StatisticsLuna",
     "TimelineGallery",
     "AboutUs",
   ],
@@ -4666,7 +4666,15 @@ const fp = new fullpage("#fullpage", {
         storyBildeBg.classList.add("bildeBgAnim");
         break;
       case "StatisticsLuna":
-        // code block
+        setTimeout(() => {
+          burger.style.backgroundColor = "#5F5F5F";
+          burger.style.boxShadow =
+            "10px 10px 20px #515151, -10px -10px 20px #6d6d6d";
+          pawButton.style.backgroundColor = "#5F5F5F";
+          pawButton.style.boxShadow =
+            "10px 10px 20px #515151, -10px -10px 20px #6d6d6d";
+        }, 1600);
+
         break;
       case "StatisticsLudo":
         // code block
@@ -4688,7 +4696,14 @@ const fp = new fullpage("#fullpage", {
         }, 500);
         break;
       case "StatisticsLuna":
-        // code block
+        pawButton.style.backgroundColor = "#F1F3F6";
+        pawButton.style.boxShadow =
+          "-10px -10px 20px #cdcfd1, 10px 10px 20px #ffffff";
+
+        burger.style.backgroundColor = "#F1F3F6";
+        burger.style.boxShadow =
+          "-10px -10px 20px #cdcfd1, 10px 10px 20px #ffffff";
+
         break;
       case "StatisticsLudo":
         // code block
