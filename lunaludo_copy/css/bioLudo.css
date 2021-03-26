@@ -1,49 +1,53 @@
 #bioLudo {
   width: 100%;
   height: 80%;
-  grid-gap: 20px;
+  padding: 20px;
+
   overflow: hidden;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .ludoHeader {
-  grid-column: 1;
-  grid-row: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.headerBilde {
+  width: 700px;
+  height: 400px;
   position: relative;
 }
 
 .ludoImg {
   background: rgb(230, 230, 230);
+  width: 215px;
+  height: 300px;
+
   position: absolute;
-  width: 30%;
-  height: 70%;
-  min-width: 150px;
-  top: 50px;
-  left: 26%;
+  left: 19%;
+  top: 8%;
 }
 
 .ludoImgBg {
   position: absolute;
-  width: 47%;
-  min-width: 300px;
-  top: 100px;
-  left: 12.8%;
+  width: 370px;
+
+  left: 3%;
+  top: 3%;
 }
 
 #bioLudo h1 {
   position: absolute;
-  top: 150px;
-  left: 65%;
+  top: 100px;
+  left: 60%;
 }
 
 .ludoStats {
-  grid-column: 2;
-  grid-row: 1;
-  position: relative;
-  padding-top: 200px;
-  padding-left: 100px;
+  align-self: flex-end;
   transform: scale(1.1);
 }
 
@@ -56,8 +60,6 @@
 }
 
 .mountainSun {
-  grid-column: 2;
-  grid-row: 2;
   overflow: hidden;
 }
 
@@ -71,8 +73,67 @@
   position: absolute;
   bottom: 310px;
   right: 349px;
-  transform: scale(1.2);
 }
 #bioLudo span {
   color: rgb(230, 28, 79);
+}
+
+@media screen and (max-width: 1200px) {
+  #bioLudo {
+    align-items: flex-start;
+  }
+  .ludoHeader {
+    flex-direction: column;
+  }
+  .ludoStats {
+    align-self: center;
+    padding-top: 100px;
+    padding-left: 10px;
+  }
+
+  .sun {
+    width: 100px;
+    bottom: 190px;
+    right: 200px;
+  }
+
+  .mountain {
+    width: 940px;
+    bottom: -25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #bioLudo {
+    align-items: center;
+  }
+
+  .ludoImg {
+    width: 180px;
+    height: 250px;
+    left: 17%;
+    top: 8%;
+  }
+
+  .ludoImgBg {
+    width: 300px;
+    left: 4%;
+    top: 6%;
+  }
+
+  #bioLudo h1 {
+    top: 270px;
+    left: 20%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .mountainSun {
+    display: none;
+  }
+
+  .ludoStats {
+    padding-top: 130px;
+    padding-left: 30px;
+  }
 }

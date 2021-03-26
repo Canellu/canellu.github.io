@@ -4635,7 +4635,7 @@ if (window.jQuery && window.fullpage) {
 }
 
 // CANELLU CODE STARTS HERE! ---------------------------
-
+var darkMode;
 /* Initialize fullpage with options */
 const fp = new fullpage("#fullpage", {
   licenseKey: "20ppTqD#p6",
@@ -4666,7 +4666,7 @@ const fp = new fullpage("#fullpage", {
         storyBildeBg.classList.add("bildeBgAnim");
         break;
       case "StatisticsLuna":
-        setTimeout(() => {
+        darkMode = setTimeout(() => {
           burger.style.backgroundColor = "#5F5F5F";
           burger.style.boxShadow =
             "10px 10px 20px #515151, -10px -10px 20px #6d6d6d";
@@ -4696,6 +4696,7 @@ const fp = new fullpage("#fullpage", {
         }, 500);
         break;
       case "StatisticsLuna":
+        clearTimeout(darkMode);
         pawButton.style.backgroundColor = "#F1F3F6";
         pawButton.style.boxShadow =
           "-10px -10px 20px #cdcfd1, 10px 10px 20px #ffffff";

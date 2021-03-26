@@ -9,6 +9,7 @@ var storyCover = document.querySelector(".cover");
 var storyBildeBg = document.querySelector(".bildeBg");
 var navnboks = document.querySelector(".navnBoks");
 var burger = document.querySelector(".burger");
+var bioLudo = document.querySelector("#bioLudo");
 
 links.forEach((e) => {
   e.addEventListener("click", () => {
@@ -86,7 +87,7 @@ slider.addEventListener("mousemove", (e) => {
 });
 
 // Start gsap animation when its observed that bio is viewable
-const bioLudo = document.querySelector("#bioLudo");
+
 const bioLuna = document.querySelector("#bioLuna");
 var observer = new IntersectionObserver((entries) => {
   // isIntersecting is true when element and viewport are overlapping
@@ -143,11 +144,11 @@ observer.observe(bioLuna);
 gsap.registerPlugin(MotionPathPlugin);
 function sendItFlying() {
   gsap.to(".btnSend", {
-    duration: 8,
+    duration: 6,
     motionPath: {
       path:
-        "M807.62 600.373C807.62 600.373 1063.73 406.593 1008.2 298.937C952.669 191.281 624.038 -80.6924 417.792 24.6973C223.807 123.822 289.285 141.418 107.289 246.808C-31.9592 327.445 5.30006 425.857 5.30006 425.857C251.209 1046.86 784.956 616.238 784.956 616.238",
-      align: "self",
+        "M1054.24 473.822C1054.24 473.822 1379.8 288.658 1398.57 160.689C1424.96 -19.2732 1141.72 -15.0105 843.086 19.1197C591.14 47.9134 200.027 76.7072 34.461 315.456C-215.857 676.42 1006.25 395.839 1006.25 395.839",
+      align: ".btnStart",
       autoRotate: true,
     },
     onStart: () => {
@@ -170,5 +171,9 @@ pawButton.addEventListener("mouseover", () => {
 });
 
 pawButton.addEventListener("mouseleave", () => {
+  pawButton.style.animation = "";
+});
+
+pawButton.addEventListener("click", () => {
   pawButton.style.animation = "";
 });

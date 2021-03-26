@@ -123,6 +123,14 @@
   right: 50px;
   transform: rotate(353deg);
 }
+.btnStart {
+  position: absolute;
+  width: 150px;
+  height: 100px;
+  bottom: 130px;
+  right: 50px;
+  transform: rotate(353deg);
+}
 
 #about h3 {
   /* border: yellowgreen 2px solid; */
@@ -139,10 +147,14 @@
   top: 850px;
 }
 
-#pathTest {
+#about p {
+  align-self: flex-start;
+  font-family: "Vollkorn", serif;
+  letter-spacing: 5px;
+  font-size: 20px;
+  font-weight: bold;
   position: absolute;
-  bottom: 70px;
-  right: -100px;
+  top: 1000px;
 }
 
 .flyAnimation {
