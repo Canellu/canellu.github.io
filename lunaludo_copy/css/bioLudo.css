@@ -108,6 +108,10 @@
     align-items: center;
   }
 
+  .mountainSun {
+    display: none;
+  }
+
   .ludoImg {
     width: 180px;
     height: 250px;
@@ -128,12 +132,16 @@
 }
 
 @media screen and (max-width: 480px) {
-  .mountainSun {
-    display: none;
+  .ludoStats {
+    padding-top: 0px;
+    padding-left: 30px;
   }
 
-  .ludoStats {
-    padding-top: 130px;
-    padding-left: 30px;
+  #bioLudo p {
+    font-size: 12px;
+  }
+
+  #bioLudo h1 {
+    font-size: 6rem;
   }
 }

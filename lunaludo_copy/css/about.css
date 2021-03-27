@@ -139,12 +139,7 @@
 }
 #about h3:first-child {
   position: absolute;
-  top: 110px;
-}
-
-#about h3:last-child {
-  position: absolute;
-  top: 850px;
+  top: 20px;
 }
 
 #about p {
@@ -154,7 +149,8 @@
   font-size: 20px;
   font-weight: bold;
   position: absolute;
-  top: 1000px;
+  top: 850px;
+  right: 20px;
 }
 
 .flyAnimation {
@@ -175,4 +171,144 @@
 
 .testPath {
   position: absolute;
+}
+
+@media screen and (max-width: 1200px) {
+  .mailBox img {
+    width: 800px;
+    padding-top: 60px;
+  }
+
+  #toFirestoreForm {
+    width: 700px;
+  }
+
+  .btnSend {
+    background-size: 100px;
+    right: 0px;
+    bottom: 80px;
+  }
+
+  .btnStart {
+    right: 0px;
+    bottom: 80px;
+  }
+
+  #about p {
+    left: 20px;
+    top: 880px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mailBox img {
+    width: 600px;
+    padding-top: 120px;
+  }
+
+  #toFirestoreForm {
+    width: 600px;
+    padding: 160px 0;
+  }
+
+  #about h3 {
+    font-size: 2rem;
+  }
+
+  #about p {
+    font-size: 15px;
+    top: 750px;
+  }
+
+  .navnBoks,
+  .emailBoks,
+  .tekstBoks {
+    font-size: 15px;
+  }
+
+  .tekstBoks {
+    height: 150px;
+  }
+
+  .btnSend {
+    background-size: 70px;
+    right: 0px;
+    bottom: 60px;
+  }
+
+  .btnStart {
+    right: 0px;
+    bottom: 60px;
+  }
+
+  .focus-border1 {
+    bottom: 389px;
+  }
+
+  .focus-border2 {
+    bottom: 332px;
+  }
+
+  .focus-border3 {
+    bottom: 167px;
+  }
+
+  #about h3:first-child {
+    top: 120px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #about h3:last-of-type {
+    padding-bottom: 80px;
+  }
+
+  #about p {
+    font-size: 15px;
+    top: 580px;
+  }
+
+  .mailBox img {
+    width: 350px;
+
+    padding-top: 195px;
+  }
+
+  #toFirestoreForm {
+    width: 300px;
+    padding: 215px 0;
+  }
+
+  .tekstBoks {
+    height: 80px;
+    font-size: 12px;
+  }
+
+  .navnBoks,
+  .emailBoks {
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .btnSend {
+    right: -60px;
+    bottom: 40px;
+  }
+
+  .btnStart {
+    right: -60px;
+    bottom: 40px;
+  }
+
+  .focus-border1 {
+    bottom: 349px;
+  }
+
+  .focus-border2 {
+    bottom: 309px;
+  }
+
+  .focus-border3 {
+    bottom: 219px;
+  }
 }

@@ -154,3 +154,21 @@ tr td:first-child {
     padding-top: 20px;
   }
 }
+
+@media screen and (max-width: 480px) {
+  #bioLuna p {
+    font-size: 12px;
+  }
+
+  #bioLuna h1 {
+    font-size: 6rem;
+    top: 0px;
+    left: 190px;
+  }
+
+  .footerBilde {
+    align-self: flex-end;
+    top: -150px;
+    left: -20px;
+  }
+}

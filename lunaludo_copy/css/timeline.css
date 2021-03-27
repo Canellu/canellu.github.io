@@ -23,8 +23,9 @@
   transform-origin: right top;
   overflow-y: hidden;
   overflow-x: hidden;
-  width: 55%;
-  height: 195%;
+  width: 840px;
+  height: 1990px;
+
   perspective: 1px;
   transform-style: preserve-3d;
 }
@@ -114,4 +115,148 @@
 #timeline img {
   max-width: 45vh;
   max-height: 40vh;
+}
+
+@media screen and (max-width: 1200px) {
+  .glassWrapper {
+    width: 640px;
+    height: 1780px;
+    margin-top: 120px;
+  }
+
+  .timeTraad {
+    transform: rotate(90deg) scale(9) translateX(300px) translateY(-0.4vh);
+  }
+
+  .slower {
+    transform: rotate(80deg) translateZ(-0.3px) scale(1) translateX(140%)
+      translateY(-10vh);
+  }
+
+  .t1 h2 {
+    transform: rotate(90deg) translateX(220px) translateY(8vh);
+  }
+
+  .faster1 {
+    transform: rotate(90deg) translateZ(0.3px) scale(0.4) translateX(-45%)
+      translateY(0vh);
+  }
+
+  .faster3 {
+    transform: rotate(85deg) translateZ(0.1px) scale(0.55) translateX(-40%)
+      translateY(0vh);
+  }
+
+  .t4 h2 {
+    transform: rotate(90deg) translateX(-450px) translateY(12vh);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .glassWrapper {
+    width: 540px;
+    height: 1580px;
+    margin-top: 150px;
+  }
+
+  #timeline h2 {
+    font-size: 2rem;
+  }
+
+  .timeTraad {
+    position: absolute;
+    top: -170px;
+  }
+
+  .t1 h2 {
+    transform: rotate(90deg) translateX(300px) translateY(5vh);
+  }
+
+  .t2 h2 {
+    transform: rotate(90deg) translateX(50px) translateY(-15vh);
+  }
+
+  .t3 h2 {
+    transform: rotate(90deg) translateX(-280px) translateY(-12vh);
+  }
+
+  .t4 h2 {
+    transform: rotate(90deg) translateX(-450px) translateY(8vh);
+  }
+
+  .t5 h2 {
+    transform: rotate(90deg) translateX(-800px) translateY(-15vh);
+  }
+
+  .t6 h2 {
+    transform: rotate(90deg) translateX(-120px) translateY(5vh);
+  }
+
+  .t7 h2 {
+    transform: rotate(90deg) translateX(-200px) translateY(-15vh);
+  }
+
+  .slower {
+    transform: rotate(80deg) translateZ(-0.3px) scale(0.7) translateX(250%)
+      translateY(-10vh);
+  }
+  .slower1 {
+    transform: rotate(87deg) translateZ(0px) scale(0.55) translateX(70%)
+      translateY(-18vh);
+  }
+  .slower2 {
+    transform: rotate(95deg) translateZ(-0.1px) scale(0.6) translateX(-20%)
+      translateY(-8vh);
+  }
+
+  .slower3 {
+    transform: rotate(92deg) translateZ(-0.2px) scale(0.7) translateX(0%)
+      translateY(-12vh);
+  }
+
+  .slower4 {
+    transform: rotate(92deg) translateZ(-0.2px) scale(0.6) translateX(0%)
+      translateY(0vh);
+  }
+
+  .faster {
+    transform: rotate(93deg) translateZ(0.1px) scale(0.35) translateX(200%)
+      translateY(-12vh);
+  }
+
+  .faster1 {
+    transform: rotate(90deg) translateZ(0.3px) scale(0.35) translateX(-85%)
+      translateY(-6vh);
+  }
+  .faster2 {
+    transform: rotate(85deg) translateZ(0.1px) scale(0.4) translateX(-50%)
+      translateY(-5vh);
+  }
+
+  .faster3 {
+    transform: rotate(85deg) translateZ(0.1px) scale(0.4) translateX(-40%)
+      translateY(0vh);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .glassWrapper {
+    width: 440px;
+    height: 1580px;
+    margin-top: 150px;
+  }
+
+  .timeTraad {
+    position: absolute;
+    top: -700px;
+  }
+
+  .t1 h2 {
+    transform: rotate(90deg) translateX(150px) translateY(5vh);
+  }
+
+  .slower {
+    transform: rotate(80deg) translateZ(-0.3px) scale(0.7) translateX(180%)
+      translateY(-10vh);
+  }
 }

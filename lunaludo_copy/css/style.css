@@ -205,3 +205,19 @@ body {
     height: 60px;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .strek {
+    width: 70%;
+  }
+
+  .sideInfo h3 {
+    font-size: 20px;
+    letter-spacing: 5px;
+    padding-left: 6px;
+  }
+
+  .pawButton {
+    bottom: 20px;
+  }
+}
