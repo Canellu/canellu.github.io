@@ -139,7 +139,12 @@
 }
 #about h3:first-child {
   position: absolute;
-  top: 20px;
+  bottom: 90%;
+}
+
+#about h3:last-of-type {
+  position: absolute;
+  bottom: 5%;
 }
 
 #about p {
@@ -149,8 +154,8 @@
   font-size: 20px;
   font-weight: bold;
   position: absolute;
-  top: 850px;
-  right: 20px;
+  top: 100%;
+  left: 20px;
 }
 
 .flyAnimation {
@@ -193,11 +198,6 @@
     right: 0px;
     bottom: 80px;
   }
-
-  #about p {
-    left: 20px;
-    top: 880px;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -217,7 +217,6 @@
 
   #about p {
     font-size: 15px;
-    top: 750px;
   }
 
   .navnBoks,
@@ -254,20 +253,11 @@
   }
 
   #about h3:first-child {
-    top: 120px;
+    bottom: 80%;
   }
 }
 
 @media screen and (max-width: 480px) {
-  #about h3:last-of-type {
-    padding-bottom: 80px;
-  }
-
-  #about p {
-    font-size: 15px;
-    top: 580px;
-  }
-
   .mailBox img {
     width: 350px;
 

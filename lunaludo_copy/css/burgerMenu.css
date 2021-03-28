@@ -127,3 +127,36 @@
   color: inherit;
   text-decoration: none;
 }
+
+@media screen and (max-width: 768px) {
+  .menu-wrap .toggler {
+    width: 60px;
+    height: 60px;
+  }
+  .burger {
+    width: 60px;
+    height: 60px;
+    justify-content: space-around;
+  }
+
+  .burger > div {
+    height: 7px;
+  }
+
+  .burger > div::before,
+  .burger > div::after {
+    height: 7px;
+    top: -12px;
+  }
+
+  .burger > div::after {
+    top: 12px;
+  }
+
+  .menu li {
+    letter-spacing: 15px;
+    font-size: 30px;
+    font-weight: 700;
+    padding: 1rem;
+  }
+}
