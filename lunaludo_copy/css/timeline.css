@@ -1,7 +1,7 @@
 #timeline {
   width: 100%;
   height: 70%;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .glassWrapper {
@@ -19,7 +19,7 @@
   align-items: center;
   width: 60vh; /* Height */
   height: 1450px; /* Width */
-  transform: rotate(-90deg) translateX(400px); /* Position up/down with translateX */
+  transform: rotate(-90deg) translateX(390px); /* Position up/down with translateX */
   overflow: hidden;
   perspective: 1px;
   transform-style: preserve-3d;
@@ -106,6 +106,24 @@
   max-height: 40vh;
 }
 
+.fa-chevron-right {
+  position: absolute;
+  bottom: 50vh;
+  right: 20px;
+  font-size: 2rem;
+  z-index: 1;
+  color: red;
+}
+
+.fa-chevron-left {
+  position: absolute;
+  top: 50vh;
+  left: 20px;
+  font-size: 2rem;
+  color: red;
+  z-index: 1;
+}
+
 @media screen and (max-width: 1440px) {
   .glassWrapper {
     height: 1350px;
@@ -164,35 +182,10 @@
 
 @media screen and (max-width: 768px) {
   .glassWrapper {
-    height: 700px;
-    transform: rotate(-90deg) translateX(0px);
+    height: 670px;
+    transform: rotate(-90deg) translateX(50px);
     overflow-y: scroll;
-    overflow-x: scroll;
   }
-
-  /* ::-webkit-scrollbar {
-    -webkit-appearance: none; standard scrollbar none
-  } */
-
-  /*Deretter customize scrollbar*/
-  /* ::-webkit-scrollbar:vertical {
-    width: 12px;
-  }
-
-  ::-webkit-scrollbar:horizontal {
-    height: 12px;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    border: 2px solid #ffffff;
-  }
-
-  ::-webkit-scrollbar-track {
-    border-radius: 10px;
-    background-color: #ffffff;
-  } */
 
   #timeline ::-webkit-scrollbar {
     background: transparent;
@@ -233,5 +226,13 @@
 
   .timeTraad {
     transform: rotate(90deg) scale(9) translateX(145px) translateY(0vh);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .glassWrapper {
+    height: 300px;
+    transform: rotate(-90deg) translateX(-50px);
+    overflow-y: scroll;
   }
 }

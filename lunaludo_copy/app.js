@@ -55,6 +55,8 @@ function sendToFirestore() {
 }
 
 // Click&Drag logic
+const leftChevron = document.querySelector("#leftChevron");
+const rightChevron = document.querySelector("#rightChevron");
 const slider = document.querySelector(".glassWrapper");
 let isDown = false;
 let startX;
@@ -65,31 +67,13 @@ var width = window.matchMedia("(max-width: 768px)");
 function mouseOrTouch(width) {
   if (width.matches) {
     console.log("Below 768px");
-
-    slider.addEventListener("touchstart", (e) => {
-      isDown = true;
-      startX = e.pageX - slider.offsetLeft; // Position of click
-      scrollTop = slider.scrollTop; // Position of scrollbar
-      slider.classList.add("grabbing");
-      console.log("touch start");
-      console.log(e);
+    leftChevron.addEventListener("click", (e) => {
+      slider.scrollTop -= 300;
     });
-
-    slider.addEventListener("touchend", (e) => {
-      isDown = false;
-      slider.classList.remove("grabbing");
-      console.log("touch end");
-      console.log(e);
-    });
-
-    slider.addEventListener("touchmove", (e) => {
-      if (!isDown) return; // stop function from running when not holding down
-      e.preventDefault(); // Prevent unwanted behaviour like marking text etc.
-      const x = e.pageX - slider.offsetLeft; // Current position of mouse
-      const walk = (x - startX) * scrollSpeed; // calculate pixels moved from initial click
-      slider.scrollTop = scrollTop - walk;
-      console.log("touch move");
-      console.log(e);
+    rightChevron.addEventListener("click", (e) => {
+      e.preventDefault();
+      console.log("scroll right");
+      slider.scrollTop += 300;
     });
   } else {
     console.log("Above 768px");
