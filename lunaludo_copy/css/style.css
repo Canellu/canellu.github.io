@@ -171,14 +171,11 @@ body {
 }
 
 /*pad*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .pawButton {
     width: 60px;
     height: 60px;
   }
-}
-
-@media screen and (max-width: 480px) {
   .strek {
     width: 70%;
   }
@@ -188,7 +185,9 @@ body {
     letter-spacing: 5px;
     padding-left: 6px;
   }
+}
 
+@media screen and (max-width: 480px) {
   .pawButton {
     display: none;
   }
