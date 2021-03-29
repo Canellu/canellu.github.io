@@ -47,8 +47,11 @@
 }
 
 .ludoStats {
+  position: relative;
   align-self: flex-end;
   transform: scale(1.1);
+  bottom: 70px;
+  left: 40px;
 }
 
 #bioLudo tr td:first-child {
@@ -65,14 +68,15 @@
 
 .mountain {
   position: absolute;
-  right: 0px;
+  right: -10px;
   bottom: -45px;
 }
 
 .sun {
   position: absolute;
-  bottom: 310px;
-  right: 349px;
+  bottom: 280px;
+  right: 285px;
+  width: 110px;
 }
 #bioLudo span {
   color: rgb(230, 28, 79);
@@ -85,21 +89,37 @@
   .ludoHeader {
     flex-direction: column;
   }
+
+  .ludoImg {
+    background: rgb(230, 230, 230);
+    width: 185px;
+    height: 280px;
+    position: absolute;
+    left: 19%;
+    top: 5%;
+  }
+
+  .ludoImgBg {
+    position: absolute;
+    width: 340px;
+    left: 3%;
+    top: 0;
+  }
   .ludoStats {
-    align-self: center;
-    padding-top: 100px;
-    padding-left: 10px;
+    align-self: flex-start;
+    bottom: -20px;
+    left: 100px;
   }
 
   .sun {
-    width: 100px;
-    bottom: 190px;
-    right: 200px;
+    width: 80px;
+    bottom: 240px;
+    right: 225px;
   }
 
   .mountain {
-    width: 940px;
-    bottom: -25px;
+    width: 1200px;
+    bottom: -45px;
   }
 }
 
@@ -116,25 +136,51 @@
     width: 180px;
     height: 250px;
     left: 17%;
-    top: 8%;
+    top: 2%;
   }
 
   .ludoImgBg {
     width: 300px;
     left: 4%;
-    top: 6%;
+    top: 0;
+  }
+
+  .ludoStats {
+    bottom: 60px;
+    left: 150px;
   }
 
   #bioLudo h1 {
-    top: 270px;
-    left: 20%;
+    top: 180px;
+    left: 60%;
   }
+
+  #bioLudo p {
+    font-size: 14px;
+  }
+
+  #bioLudo tr td:first-child {
+    padding: 2px;
 }
 
 @media screen and (max-width: 480px) {
+
+  .ludoImg {
+    width: 140px;
+    height: 180px;
+    left: 11%;
+    top: 5%;
+  }
+
+  .ludoImgBg {
+    width: 240px;
+    left: 0;
+    top: -10px;
+  }
+
   .ludoStats {
-    padding-top: 0px;
-    padding-left: 30px;
+    bottom: 120px;
+    left: 20px;
   }
 
   #bioLudo p {
@@ -142,6 +188,6 @@
   }
 
   #bioLudo h1 {
-    font-size: 6rem;
-  }
+    display: none;
+  }  
 }

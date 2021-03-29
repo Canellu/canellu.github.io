@@ -12,12 +12,12 @@
 
 .cover {
   position: absolute;
-  width: 770px;
-  height: 690px;
+  width: 650px;
+  height: 550px;
   border: 2px solid black;
   background: rgb(230, 230, 230);
-  top: 80px;
-  left: 40px;
+  top: 0px;
+  left: 80px;
   opacity: 0;
   /* animation: moveDown 0.5s ease-in; */
 }
@@ -28,20 +28,17 @@
 
 .storyBilde {
   position: relative;
-  width: 770px;
-  height: 690px;
-
   grid-column: 1 / span 2; /*从第一格开始过去占两格*/
   grid-row: 1 / span 2;
 }
 
 .bildeBg {
   position: absolute;
-  width: 770px;
-  height: 690px;
+  width: 650px;
+  height: 550px;
 
-  top: 110px;
-  left: 10px;
+  top: 40px;
+  left: 35px;
   grid-column: 1 / span 2; /*从第一格开始过去占两格*/
   grid-row: 1 / span 2;
   background-color: var(--primary-color);
@@ -62,11 +59,12 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
-  right: 0px;
-  bottom: 20px;
+  right: 150px;
+  bottom: 100px;
 }
 
 .storyTittel h2 {
+  font-size: 3rem;
   letter-spacing: 15px;
   padding: 8px;
 }
@@ -84,8 +82,8 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  bottom: -70px;
-  right: -640px;
+  bottom: 70px;
+  right: -340px;
   width: 500px;
   height: 250px;
   padding: 10px;
@@ -95,24 +93,15 @@
 
 @media screen and (max-width: 1440px) {
   .cover {
-    width: 700px;
-    height: 600px;
+    width: 630px;
+    height: 530px;
     top: 20px;
   }
 
-  .storyBilde {
-    width: 700px;
-    height: 600px;
-  }
-
   .bildeBg {
-    width: 700px;
-    height: 600px;
+    width: 630px;
+    height: 530px;
     top: 60px;
-  }
-
-  .storyTittel h2 {
-    font-size: 3rem;
   }
 
   .storyTittel {
@@ -120,8 +109,8 @@
     right: 60px;
   }
   .stories {
-    bottom: -15px;
-    right: -550px;
+    bottom: 70px;
+    right: -350px;
     width: 450px;
     height: 200px;
   }
@@ -143,8 +132,8 @@
     font-size: 0.7rem;
   }
   .stories {
-    bottom: -15px;
-    right: -420px;
+    bottom: 150px;
+    right: -300px;
     width: 350px;
     height: 150px;
   }
@@ -152,11 +141,6 @@
     width: 550px;
     height: 450px;
     top: 20px;
-  }
-
-  .storyBilde {
-    width: 550px;
-    height: 450px;
   }
 
   .bildeBg {
@@ -183,41 +167,43 @@
   }
   .stories {
     top: 120px;
-    right: -220px;
+    right: -200px;
     width: 150px;
-    height: 300px;
+    height: 280px;
   }
 
   .cover {
-    width: 450px;
-    height: 400px;
+    width: 400px;
+    height: 350px;
     top: 20px;
   }
 
-  .storyBilde {
-    width: 450px;
-    height: 400px;
-  }
-
   .bildeBg {
-    width: 450px;
-    height: 400px;
+    width: 400px;
+    height: 350px;
     top: 50px;
   }
 }
 
 /*phone*/
 @media screen and (max-width: 480px) {
-  .cover,
-  .bildeBg,
-  .storyBilde {
+  .cover {
     width: 280px;
     height: 280px;
+    top: 40px;
+    left: 40px;
+  }
+
+  .bildeBg {
+    width: 280px;
+    height: 280px;
+    top: 70px;
+    left: 10px;
   }
 
   .storyTittel {
     width: 300px;
-    top: -20px;
+    top: 20px;
     left: -115px;
   }
 
@@ -231,7 +217,7 @@
   }
 
   .stories {
-    top: 350px;
+    top: 370px;
     left: 40px;
     width: 240px;
     height: 100px;

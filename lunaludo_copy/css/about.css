@@ -120,7 +120,7 @@
   cursor: pointer;
   z-index: 10;
   bottom: 130px;
-  right: 50px;
+  right: 0px;
   transform: rotate(353deg);
 }
 .btnStart {
@@ -128,7 +128,7 @@
   width: 150px;
   height: 100px;
   bottom: 130px;
-  right: 50px;
+  right: 0px;
   transform: rotate(353deg);
 }
 
@@ -139,12 +139,14 @@
 }
 #about h3:first-child {
   position: absolute;
-  bottom: 90%;
+  bottom: 600px;
+  left: 50px;
 }
 
 #about h3:last-of-type {
   position: absolute;
-  bottom: 5%;
+  bottom: 20px;
+  left: 50px;
 }
 
 #about p {
@@ -154,8 +156,8 @@
   font-size: 20px;
   font-weight: bold;
   position: absolute;
-  top: 100%;
-  left: 20px;
+  bottom: -30px;
+  left: 50px;
 }
 
 .flyAnimation {
@@ -174,8 +176,9 @@
   }
 }
 
-.testPath {
-  position: absolute;
+.mailBox img {
+  width: 900px;
+  padding-top: 40px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -190,12 +193,10 @@
 
   .btnSend {
     background-size: 100px;
-    right: 0px;
     bottom: 80px;
   }
 
   .btnStart {
-    right: 0px;
     bottom: 80px;
   }
 }
@@ -203,12 +204,14 @@
 @media screen and (max-width: 768px) {
   .mailBox img {
     width: 600px;
-    padding-top: 120px;
+    padding-top: 20px;
   }
 
   #toFirestoreForm {
     width: 600px;
-    padding: 160px 0;
+    padding-top: 20px;
+    padding-bottom: 240px;
+    justify-content: center;
   }
 
   #about h3 {
@@ -217,6 +220,15 @@
 
   #about p {
     font-size: 15px;
+    bottom: 40px;
+  }
+
+  #about h3:first-child {
+    bottom: 600px;
+  }
+
+  #about h3:last-of-type {
+    bottom: 80px;
   }
 
   .navnBoks,
@@ -241,32 +253,29 @@
   }
 
   .focus-border1 {
-    bottom: 389px;
+    bottom: 484px;
   }
 
   .focus-border2 {
-    bottom: 332px;
+    bottom: 433px;
   }
 
   .focus-border3 {
-    bottom: 167px;
-  }
-
-  #about h3:first-child {
-    bottom: 80%;
+    bottom: 283px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .mailBox img {
-    width: 350px;
-
-    padding-top: 195px;
+    width: 340px;
+    padding-top: 20px;
   }
 
   #toFirestoreForm {
     width: 300px;
-    padding: 215px 0;
+    padding-top: 20px;
+    padding-bottom: 380px;
+    justify-content: center;
   }
 
   .tekstBoks {
@@ -276,7 +285,7 @@
 
   .navnBoks,
   .emailBoks {
-    height: 30px;
+    height: 40px;
     font-size: 12px;
   }
 
@@ -290,15 +299,34 @@
     bottom: 40px;
   }
 
+  #about h3:first-child {
+    bottom: 430px;
+    left: 20px;
+  }
+
+  #about h3:last-of-type {
+    bottom: 100px;
+    left: 25px;
+  }
+
+  #about h3 {
+    font-size: 1.8rem;
+  }
+
+  #about p {
+    bottom: 50px;
+    left: 25px;
+    font-size: 12px;
+  }
   .focus-border1 {
-    bottom: 349px;
+    bottom: 519px;
   }
 
   .focus-border2 {
-    bottom: 309px;
+    bottom: 479px;
   }
 
   .focus-border3 {
-    bottom: 219px;
+    bottom: 399px;
   }
 }
