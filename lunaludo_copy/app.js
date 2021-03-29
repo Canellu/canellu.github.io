@@ -86,6 +86,37 @@ slider.addEventListener("mousemove", (e) => {
   slider.scrollTop = scrollTop - walk;
 });
 
+var width = window.matchMedia("(max-width: 768px)");
+function forTouchScreens(width) {
+  if (width.matches) {
+    console.log("Below 768px");
+
+    slider.addEventListener("touchstart", (e) => {
+      isDown = true;
+      startX = e.pageX - slider.offsetLeft; // Position of click
+      scrollTop = slider.scrollTop; // Position of scrollbar
+      slider.classList.add("grabbing");
+    });
+
+    slider.addEventListener("touchend", (e) => {
+      isDown = false;
+      slider.classList.remove("grabbing");
+    });
+
+    slider.addEventListener("touchmove", (e) => {
+      if (!isDown) return; // stop function from running when not holding down
+      e.preventDefault(); // Prevent unwanted behaviour like marking text etc.
+      const x = e.pageX - slider.offsetLeft; // Current position of mouse
+      const walk = (x - startX) * scrollSpeed; // calculate pixels moved from initial click
+      slider.scrollTop = scrollTop - walk;
+    });
+  } else {
+    console.log("Above 768px");
+  }
+}
+forTouchScreens(width);
+width.addListener(forTouchScreens);
+
 // Start gsap animation when its observed that bio is viewable
 
 const bioLuna = document.querySelector("#bioLuna");
