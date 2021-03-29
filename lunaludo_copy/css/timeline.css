@@ -42,6 +42,7 @@
 
 .t1Copy h2 {
   transform: rotate(90deg) translateX(-150px) translateY(8vh);
+  display: none;
 }
 
 .t2 h2 {
@@ -106,32 +107,30 @@
   max-height: 40vh;
 }
 
-.fa-chevron-right {
+#rightChevron {
   position: absolute;
   bottom: 50vh;
   right: 20px;
   font-size: 2rem;
   z-index: 1;
   color: red;
+  display: none;
 }
 
-.fa-chevron-left {
+#leftChevron {
   position: absolute;
   top: 50vh;
   left: 20px;
   font-size: 2rem;
   color: red;
   z-index: 1;
+  display: none;
 }
 
 @media screen and (max-width: 1440px) {
   .glassWrapper {
     height: 1350px;
     transform: rotate(-90deg) translateX(380px);
-  }
-
-  .t1Copy {
-    display: none;
   }
 }
 
@@ -187,6 +186,20 @@
     overflow-y: scroll;
   }
 
+  #rightChevron {
+    bottom: 50vh;
+    right: 20px;
+    color: rgb(87, 87, 87);
+    display: block;
+  }
+
+  #leftChevron {
+    top: 47vh;
+    left: 20px;
+    color: rgb(87, 87, 87);
+    display: block;
+  }
+
   #timeline ::-webkit-scrollbar {
     background: transparent;
     height: 10px;
@@ -211,28 +224,161 @@
     display: none;
   }
 
-  .t1Copy {
-    display: block;
-  }
-
-  #timeline img {
-    max-width: 35vh;
-    max-height: 30vh;
-  }
-
   #timeline h2 {
     font-size: 1.9rem;
   }
 
   .timeTraad {
-    transform: rotate(90deg) scale(9) translateX(145px) translateY(0vh);
+    transform: rotate(90deg) scale(9) translateX(145px) translateY(-0.5vh);
+  }
+
+  .t1Copy h2 {
+    transform: rotate(90deg) translateX(-170px) translateY(5vh);
+    display: block;
+  }
+
+  .t2 h2 {
+    transform: rotate(90deg) translateX(-190px) translateY(5vh);
+  }
+
+  .t3 h2 {
+    transform: rotate(90deg) translateX(-520px) translateY(5vh);
+  }
+
+  .t4 h2 {
+    transform: rotate(90deg) translateX(-540px) translateY(5vh);
+  }
+
+  .t5 h2 {
+    transform: rotate(90deg) translateX(-860px) translateY(5vh);
+  }
+
+  .t6 h2 {
+    transform: rotate(90deg) translateX(-850px) translateY(5vh);
+  }
+
+  .slower {
+    transform: rotate(90deg) translateZ(0px) scale(0.9) translateX(0%)
+      translateY(-16vh);
+  }
+
+  .slower1 {
+    transform: rotate(90deg) translateZ(0px) scale(0.9) translateX(-20%)
+      translateY(-16vh);
+  }
+
+  .slower2 {
+    transform: rotate(90deg) translateZ(0px) scale(0.9) translateX(-20%)
+      translateY(-16vh);
+  }
+  .slower3 {
+    transform: rotate(90deg) translateZ(0px) scale(0.9) translateX(-20%)
+      translateY(-16vh);
+  }
+
+  .faster {
+    transform: rotate(90deg) translateZ(0px) scale(0.9) translateX(-10%)
+      translateY(-16vh);
+  }
+
+  .faster1 {
+    transform: rotate(90deg) translateZ(0px) scale(0.9) translateX(-10%)
+      translateY(-16vh);
+  }
+  .faster2 {
+    transform: rotate(90deg) translateZ(0px) scale(0.9) translateX(-20%)
+      translateY(-16vh);
+  }
+
+  .faster3 {
+    transform: rotate(90deg) translateZ(0px) scale(0.9) translateX(-20%)
+      translateY(-16vh);
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
   .glassWrapper {
     height: 300px;
-    transform: rotate(-90deg) translateX(-50px);
+    transform: rotate(-90deg) translateX(-80px);
     overflow-y: scroll;
+  }
+
+  #rightChevron {
+    bottom: 48vh;
+    right: 20px;
+  }
+
+  #leftChevron {
+    top: 47vh;
+    left: 20px;
+  }
+
+  #timeline h2 {
+    font-size: 1.5rem;
+  }
+
+  .timeTraad {
+    transform: rotate(90deg) scale(9) translateX(125px) translateY(-1vh);
+  }
+
+  .t1Copy h2 {
+    transform: rotate(90deg) translateX(-130px) translateY(0vh);
+    display: block;
+  }
+
+  .t2 h2 {
+    transform: rotate(90deg) translateX(-140px) translateY(0vh);
+  }
+
+  .t3 h2 {
+    transform: rotate(90deg) translateX(-380px) translateY(0vh);
+  }
+
+  .t4 h2 {
+    transform: rotate(90deg) translateX(-400px) translateY(0vh);
+  }
+
+  .t5 h2 {
+    transform: rotate(90deg) translateX(-420px) translateY(0vh);
+  }
+
+  .t6 h2 {
+    transform: rotate(90deg) translateX(-195px) translateY(0vh);
+  }
+
+  .slower {
+    transform: rotate(90deg) translateZ(0px) scale(1) translateX(0%)
+      translateY(-22vh);
+  }
+
+  .slower1 {
+    transform: rotate(90deg) translateZ(0px) scale(1) translateX(-10%)
+      translateY(-22vh);
+  }
+
+  .slower2 {
+    transform: rotate(90deg) translateZ(0px) scale(1) translateX(-10%)
+      translateY(-22vh);
+  }
+  .slower3 {
+    display: none;
+  }
+
+  .faster {
+    transform: rotate(90deg) translateZ(0px) scale(1) translateX(-5%)
+      translateY(-22vh);
+  }
+
+  .faster1 {
+    transform: rotate(90deg) translateZ(0px) scale(1) translateX(0%)
+      translateY(-22vh);
+  }
+  .faster2 {
+    transform: rotate(90deg) translateZ(0px) scale(1) translateX(-20%)
+      translateY(-22vh);
+  }
+
+  .faster3 {
+    display: none;
   }
 }
