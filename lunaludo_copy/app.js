@@ -66,13 +66,12 @@ let scrollSpeed = 1;
 var width = window.matchMedia("(max-width: 768px)");
 function mouseOrTouch(width) {
   if (width.matches) {
-    console.log("Below 768px");
     leftChevron.addEventListener("click", (e) => {
+      e.preventDefault();
       slider.scrollTop -= 300;
     });
     rightChevron.addEventListener("click", (e) => {
       e.preventDefault();
-      console.log("scroll right");
       slider.scrollTop += 300;
     });
   } else {
