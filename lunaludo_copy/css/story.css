@@ -51,16 +51,16 @@
 }
 
 .storyTittel {
-  position: absolute;
+  position: relative;
   grid-column: 2 / span 2;
   grid-row: 1 / 2; /*从第一条线到第二条线*/
   z-index: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: flex-start;
-  right: 150px;
-  bottom: 100px;
+  right: -200px;
+  top: -120px;
 }
 
 .storyTittel h2 {
@@ -75,15 +75,15 @@
 }
 
 .stories {
-  position: absolute;
+  position: relative;
   grid-column: 3 / span 1;
   grid-row: 2 / 3;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  bottom: 70px;
-  right: -340px;
+  right: 150px;
+  bottom: 30px;
   width: 500px;
   height: 250px;
   padding: 10px;
@@ -105,12 +105,12 @@
   }
 
   .storyTittel {
-    bottom: 100px;
-    right: 60px;
+    right: -180px;
+    top: -100px;
   }
   .stories {
-    bottom: 70px;
-    right: -350px;
+    bottom: -20px;
+    right: 140px;
     width: 450px;
     height: 200px;
   }
@@ -123,17 +123,12 @@
     padding: 4px;
   }
 
-  .storyTittel {
-    right: 120px;
-    bottom: 180px;
-  }
-
   .stories p {
     font-size: 0.7rem;
   }
   .stories {
-    bottom: 150px;
-    right: -300px;
+    bottom: 100px;
+    right: 120px;
     width: 350px;
     height: 150px;
   }
@@ -153,21 +148,21 @@
 /*pad*/
 @media screen and (max-width: 768px) {
   .storyTittel h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     letter-spacing: 5px;
   }
 
   .storyTittel {
-    right: 20px;
-    bottom: 210px;
+    right: -150px;
+    top: -140px;
   }
 
   .stories p {
     font-size: 0.7rem;
   }
   .stories {
-    top: 120px;
-    right: -200px;
+    bottom: 200px;
+    right: -30px;
     width: 150px;
     height: 280px;
   }
@@ -202,9 +197,8 @@
   }
 
   .storyTittel {
-    width: 300px;
-    top: 20px;
-    left: -115px;
+    left: -46px;
+    top: -80px;
   }
 
   .storyTittel h2 {
@@ -217,8 +211,8 @@
   }
 
   .stories {
-    top: 370px;
-    left: 40px;
+    top: 150px;
+    right: 60px;
     width: 240px;
     height: 100px;
   }

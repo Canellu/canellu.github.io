@@ -72,12 +72,12 @@ function mouseOrTouchSmall(widthSmall) {
     rightChevron.removeEventListener("click", rightClick);
     leftChevron.addEventListener("click", (e) => {
       e.preventDefault();
-      slider.scrollTop -= 250;
+      slider.scrollTop -= 270;
       console.log("-100");
     });
     rightChevron.addEventListener("click", (e) => {
       e.preventDefault();
-      slider.scrollTop += 250;
+      slider.scrollTop += 270;
       console.log("+100");
     });
   } else {

@@ -1,7 +1,7 @@
 #timeline {
   width: 100%;
   height: 70%;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .glassWrapper {
@@ -299,6 +299,7 @@
 @media screen and (max-width: 480px) {
   .glassWrapper {
     height: 300px;
+    width: 370px;
     transform: rotate(-90deg) translateX(-80px);
     overflow-y: scroll;
   }
@@ -357,7 +358,7 @@
   }
 
   .slower2 {
-    transform: rotate(90deg) translateZ(0px) scale(1) translateX(-10%)
+    transform: rotate(90deg) translateZ(0px) scale(1) translateX(20%)
       translateY(-22vh);
   }
   .slower3 {
@@ -370,11 +371,11 @@
   }
 
   .faster1 {
-    transform: rotate(90deg) translateZ(0px) scale(1) translateX(0%)
+    transform: rotate(90deg) translateZ(0px) scale(1) translateX(10%)
       translateY(-22vh);
   }
   .faster2 {
-    transform: rotate(90deg) translateZ(0px) scale(1) translateX(-20%)
+    transform: rotate(90deg) translateZ(0px) scale(1) translateX(20%)
       translateY(-22vh);
   }
 

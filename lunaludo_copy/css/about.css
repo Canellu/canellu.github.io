@@ -138,14 +138,14 @@
   letter-spacing: 5px;
 }
 #about h3:first-child {
-  position: absolute;
-  bottom: 600px;
+  position: relative;
+  top: 60px;
   left: 50px;
 }
 
 #about h3:last-of-type {
-  position: absolute;
-  bottom: 20px;
+  position: relative;
+  bottom: 40px;
   left: 50px;
 }
 
@@ -155,8 +155,8 @@
   letter-spacing: 5px;
   font-size: 20px;
   font-weight: bold;
-  position: absolute;
-  bottom: -30px;
+  position: relative;
+  bottom: 0px;
   left: 50px;
 }
 
@@ -220,15 +220,15 @@
 
   #about p {
     font-size: 15px;
-    bottom: 40px;
+    bottom: 20px;
   }
 
   #about h3:first-child {
-    bottom: 600px;
+    top: 20px;
   }
 
   #about h3:last-of-type {
-    bottom: 80px;
+    bottom: 40px;
   }
 
   .navnBoks,
@@ -300,12 +300,12 @@
   }
 
   #about h3:first-child {
-    bottom: 430px;
+    top: -10px;
     left: 20px;
   }
 
   #about h3:last-of-type {
-    bottom: 100px;
+    bottom: 40px;
     left: 25px;
   }
 
@@ -314,7 +314,7 @@
   }
 
   #about p {
-    bottom: 50px;
+    bottom: 20px;
     left: 25px;
     font-size: 12px;
   }
