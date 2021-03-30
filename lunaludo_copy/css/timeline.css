@@ -109,20 +109,14 @@
 
 #rightChevron {
   position: absolute;
-  bottom: 50vh;
-  right: 20px;
   font-size: 2rem;
   z-index: 1;
-  color: red;
   display: none;
 }
 
 #leftChevron {
   position: absolute;
-  top: 50vh;
-  left: 20px;
   font-size: 2rem;
-  color: red;
   z-index: 1;
   display: none;
 }
@@ -186,20 +180,6 @@
     overflow-y: scroll;
   }
 
-  #rightChevron {
-    bottom: 50vh;
-    right: 20px;
-    color: rgb(87, 87, 87);
-    display: block;
-  }
-
-  #leftChevron {
-    top: 47vh;
-    left: 20px;
-    color: rgb(87, 87, 87);
-    display: block;
-  }
-
   #timeline ::-webkit-scrollbar {
     background: transparent;
     height: 10px;
@@ -220,10 +200,6 @@
     background: transparent;
   }
 
-  .t1 {
-    display: none;
-  }
-
   #timeline h2 {
     font-size: 1.9rem;
   }
@@ -232,67 +208,29 @@
     transform: rotate(90deg) scale(9) translateX(145px) translateY(-0.5vh);
   }
 
-  .t1Copy h2 {
-    transform: rotate(90deg) translateX(-170px) translateY(5vh);
-    display: block;
+  .t1 h2 {
+    transform: rotate(90deg) translateX(-180px) translateY(5vh);
   }
 
   .t2 h2 {
-    transform: rotate(90deg) translateX(-190px) translateY(5vh);
+    transform: rotate(90deg) translateX(-130px) translateY(-25vh);
   }
 
   .t3 h2 {
-    transform: rotate(90deg) translateX(-520px) translateY(5vh);
-  }
-
-  .t4 h2 {
-    transform: rotate(90deg) translateX(-540px) translateY(5vh);
-  }
-
-  .t5 h2 {
-    transform: rotate(90deg) translateX(-860px) translateY(5vh);
-  }
-
-  .t6 h2 {
-    transform: rotate(90deg) translateX(-850px) translateY(5vh);
-  }
-
-  .slower {
-    transform: rotate(90deg) translateZ(0px) scale(0.9) translateX(0%)
-      translateY(-16vh);
-  }
-
-  .slower1 {
-    transform: rotate(90deg) translateZ(0px) scale(0.9) translateX(-20%)
-      translateY(-16vh);
-  }
-
-  .slower2 {
-    transform: rotate(90deg) translateZ(0px) scale(0.9) translateX(-20%)
-      translateY(-16vh);
-  }
-  .slower3 {
-    transform: rotate(90deg) translateZ(0px) scale(0.9) translateX(-20%)
-      translateY(-16vh);
-  }
-
-  .faster {
-    transform: rotate(90deg) translateZ(0px) scale(0.9) translateX(-10%)
-      translateY(-16vh);
+    transform: rotate(90deg) translateX(-300px) translateY(-16vh);
   }
 
   .faster1 {
-    transform: rotate(90deg) translateZ(0px) scale(0.9) translateX(-10%)
-      translateY(-16vh);
-  }
-  .faster2 {
-    transform: rotate(90deg) translateZ(0px) scale(0.9) translateX(-20%)
-      translateY(-16vh);
+    transform: rotate(90deg) translateZ(0.3px) scale(0.45) translateX(-45%)
+      translateY(-5vh);
   }
 
-  .faster3 {
-    transform: rotate(90deg) translateZ(0px) scale(0.9) translateX(-20%)
-      translateY(-16vh);
+  .t4 h2 {
+    transform: rotate(90deg) translateX(-400px) translateY(10vh);
+  }
+
+  .t6 h2 {
+    transform: rotate(90deg) translateX(100px) translateY(10vh);
   }
 }
 
@@ -300,22 +238,30 @@
   .glassWrapper {
     height: 300px;
     width: 370px;
-    transform: rotate(-90deg) translateX(-80px);
+    transform: rotate(-90deg) translateX(-100px);
     overflow-y: scroll;
   }
 
   #rightChevron {
-    bottom: 48vh;
-    right: 20px;
+    bottom: 120px;
+    right: 130px;
+    color: rgb(87, 87, 87);
+    display: block;
   }
 
   #leftChevron {
-    top: 47vh;
-    left: 20px;
+    bottom: 120px;
+    left: 130px;
+    color: rgb(87, 87, 87);
+    display: block;
   }
 
   #timeline h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+  }
+
+  .t1 {
+    display: none;
   }
 
   .timeTraad {
@@ -323,42 +269,42 @@
   }
 
   .t1Copy h2 {
-    transform: rotate(90deg) translateX(-130px) translateY(0vh);
+    transform: rotate(90deg) translateX(-160px) translateY(0vh);
     display: block;
   }
 
   .t2 h2 {
-    transform: rotate(90deg) translateX(-140px) translateY(0vh);
+    transform: rotate(90deg) translateX(-180px) translateY(0vh);
   }
 
   .t3 h2 {
-    transform: rotate(90deg) translateX(-380px) translateY(0vh);
+    transform: rotate(90deg) translateX(-470px) translateY(0vh);
   }
 
   .t4 h2 {
-    transform: rotate(90deg) translateX(-400px) translateY(0vh);
+    transform: rotate(90deg) translateX(-500px) translateY(0vh);
   }
 
   .t5 h2 {
-    transform: rotate(90deg) translateX(-420px) translateY(0vh);
+    transform: rotate(90deg) translateX(-510px) translateY(0vh);
   }
 
   .t6 h2 {
-    transform: rotate(90deg) translateX(-195px) translateY(0vh);
+    transform: rotate(90deg) translateX(-265px) translateY(0vh);
   }
 
   .slower {
-    transform: rotate(90deg) translateZ(0px) scale(1) translateX(0%)
+    transform: rotate(90deg) translateZ(0px) scale(0.9) translateX(-10%)
       translateY(-22vh);
   }
 
   .slower1 {
-    transform: rotate(90deg) translateZ(0px) scale(1) translateX(-10%)
+    transform: rotate(90deg) translateZ(0px) scale(0.9) translateX(-30%)
       translateY(-22vh);
   }
 
   .slower2 {
-    transform: rotate(90deg) translateZ(0px) scale(1) translateX(20%)
+    transform: rotate(90deg) translateZ(0px) scale(0.9) translateX(-40%)
       translateY(-22vh);
   }
   .slower3 {
@@ -366,16 +312,16 @@
   }
 
   .faster {
-    transform: rotate(90deg) translateZ(0px) scale(1) translateX(-5%)
+    transform: rotate(90deg) translateZ(0px) scale(0.9) translateX(-20%)
       translateY(-22vh);
   }
 
   .faster1 {
-    transform: rotate(90deg) translateZ(0px) scale(1) translateX(10%)
+    transform: rotate(90deg) translateZ(0px) scale(0.9) translateX(-30%)
       translateY(-22vh);
   }
   .faster2 {
-    transform: rotate(90deg) translateZ(0px) scale(1) translateX(20%)
+    transform: rotate(90deg) translateZ(0px) scale(0.9) translateX(-50%)
       translateY(-22vh);
   }
 
