@@ -237,19 +237,19 @@
   .glassWrapper {
     height: 300px;
     width: 370px;
-    transform: rotate(-90deg) translateX(-100px);
+    transform: rotate(-90deg) translateX(-80px);
     overflow-y: scroll;
   }
 
   #rightChevron {
-    bottom: 120px;
+    bottom: 150px;
     right: 130px;
     color: rgb(87, 87, 87);
     display: block;
   }
 
   #leftChevron {
-    bottom: 120px;
+    bottom: 150px;
     left: 130px;
     color: rgb(87, 87, 87);
     display: block;

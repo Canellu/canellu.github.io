@@ -73,12 +73,10 @@ function mouseOrTouchSmall(widthSmall) {
     leftChevron.addEventListener("click", (e) => {
       e.preventDefault();
       slider.scrollTop -= 270;
-      console.log("-100");
     });
     rightChevron.addEventListener("click", (e) => {
       e.preventDefault();
       slider.scrollTop += 270;
-      console.log("+100");
     });
   }
 }
