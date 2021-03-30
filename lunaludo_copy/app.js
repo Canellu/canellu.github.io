@@ -68,8 +68,8 @@ var widthSmall = window.matchMedia("(max-width: 480px)");
 
 function mouseOrTouchSmall(widthSmall) {
   if (widthSmall.matches) {
-    leftChevron.removeEventListener("click", leftClick);
-    rightChevron.removeEventListener("click", rightClick);
+    // leftChevron.removeEventListener("click", leftClick);
+    // rightChevron.removeEventListener("click", rightClick);
     leftChevron.addEventListener("click", (e) => {
       e.preventDefault();
       slider.scrollTop -= 270;
@@ -80,26 +80,44 @@ function mouseOrTouchSmall(widthSmall) {
       slider.scrollTop += 270;
       console.log("+100");
     });
-  } else {
   }
 }
 
-function leftClick(e) {
-  e.preventDefault();
-  slider.scrollTop -= 650;
-  console.log("-650");
-}
+// function leftClick(e) {
+//   e.preventDefault();
+//   slider.scrollTop -= 650;
+//   console.log("-650");
+// }
 
-function rightClick(e) {
-  e.preventDefault();
-  slider.scrollTop += 650;
-  console.log("+650");
-}
+// function rightClick(e) {
+//   e.preventDefault();
+//   slider.scrollTop += 650;
+//   console.log("+650");
+// }
 
 function mouseOrTouch(width) {
   if (width.matches) {
-    leftChevron.addEventListener("click", leftClick);
-    rightChevron.addEventListener("click", rightClick);
+    // leftChevron.addEventListener("click", leftClick);
+    // rightChevron.addEventListener("click", rightClick);
+    slider.addEventListener("touchstart", (e) => {
+      isDown = true;
+      startX = e.pageX - slider.offsetLeft; // Position of click
+      scrollTop = slider.scrollTop; // Position of scrollbar
+      slider.classList.add("grabbing");
+    });
+
+    slider.addEventListener("touchend", (e) => {
+      isDown = false;
+      slider.classList.remove("grabbing");
+    });
+
+    slider.addEventListener("touchmove", (e) => {
+      if (!isDown) return; // stop function from running when not holding down
+      e.preventDefault(); // Prevent unwanted behaviour like marking text etc.
+      const x = e.pageX - slider.offsetLeft; // Current position of mouse
+      const walk = (x - startX) * scrollSpeed; // calculate pixels moved from initial click
+      slider.scrollTop = scrollTop - walk;
+    });
   } else {
     console.log("Above 768px");
     slider.addEventListener("mousedown", (e) => {
